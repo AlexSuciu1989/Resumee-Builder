@@ -1,0 +1,8 @@
+.AddHeader {
+    display: flex;
+    flex-direction: column;
+}
+
+.AddHeader-input {
+    margin: 15px;
+}
