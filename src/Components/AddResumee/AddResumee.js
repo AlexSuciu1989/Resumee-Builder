@@ -104,8 +104,8 @@ function AddResumee() {
             const projectsResponse = await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postProjects.php", projects);
             const honoursResponse = await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postHonoursAndAwards.php", honours);
             const licenseResponse = await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postDrivingLicense.php", license);
-            
-            console.log("Success:", { headerResponse, workExperienceResponse, educationResponse, languageResponse, digitalSkillResponse, projectsResponse, honoursResponse, licenseResponse });
+            window.location.reload();
+            // console.log("Success:", { headerResponse, workExperienceResponse, educationResponse, languageResponse, digitalSkillResponse, projectsResponse, honoursResponse, licenseResponse });
         } catch (error) {
             console.error("Error:", error);
         }

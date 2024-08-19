@@ -1,0 +1,191 @@
+.ViewResumee.gray .digital-skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ViewResumee.gray .digital-skills ul li {
+    margin: 5px;
+    background-color: rgba(172, 180, 171,0.1);
+    color: rgba(172, 180, 171);
+    padding: 3px 5px;
+    font-style: italic;
+    border-radius: 4px;
+}
+
+.ViewResumee.gray .licence-type{
+    font-weight: bolder;
+    color:gray;
+}
+
+.ViewResumee.gray .licence{
+    margin: 5px;
+    background-color: rgba(172, 180, 171,0.1);
+    color: rgba(172, 180, 171);
+    padding: 3px 5px;
+    font-style: italic;
+    border-radius: 4px;
+}
+
+.ViewResumee.gray .edu-title {
+    margin-bottom: 2px;
+}
+
+.ViewResumee.gray .edu-school {
+    margin-top: 0px;
+    color: rgb(160, 160, 160);
+    text-indent: 10px;
+    font-style: italic;
+}
+
+.ViewResumee.gray .edu-location {
+    margin-left: 10px;
+    color: rgb(117, 117, 117);
+}
+
+.ViewResumee.gray .edu-city-country{
+    font-weight: bolder;
+    color: rgb(117, 117, 117);
+    font-style: italic;
+}
+
+
+.ViewResumee.gray .header-info div {
+    display: flex;
+    margin-top: 20px;
+}
+
+.ViewResumee.gray .header-info div p {
+    margin-right: 20px;
+}
+
+.ViewResumee.gray .titles {
+    font-weight: bold;
+}
+
+.ViewResumee.gray .icon {
+    max-width: 15px;
+    max-height: 15px;
+    margin-right: 4px;
+}
+
+.ViewResumee.gray .about-me-title {
+    color: rgba(172, 180, 171,0.8);
+}
+.ViewResumee.gray .about-me-desc {
+    text-indent: 3%;
+    text-align: justify;
+}
+
+.ViewResumee.gray .name {
+    color: rgba(172, 180, 171);
+}
+
+.ViewResumee.gray .honours-issuer{
+    margin-top: 0px;
+    color: rgb(160, 160, 160);
+    text-indent: 10px;
+    font-style: italic;
+}
+
+.ViewResumee.gray .language-type {
+    font-weight: bolder;
+}
+
+.ViewResumee.gray .language-first-row, .ViewResumee.gray .language-second-row{
+    display: flex;
+}
+
+.ViewResumee.gray .language-headers {
+    font-weight: bolder;
+    color: gray;
+    margin-left: 10px;
+    background-color: white;
+}
+
+.ViewResumee.gray .language-levels {
+    margin: 5px;
+    background-color: rgba(172, 180, 171,0.1);
+    color: rgba(172, 180, 171);
+    padding: 3px 5px;
+    font-style: italic;
+    border-radius: 4px;
+}
+
+.ViewResumee.gray .project-title {
+    margin-bottom: 2px;
+}
+
+.ViewResumee.gray .work-experience {
+    margin-bottom: 60px;
+}
+.ViewResumee.gray .position {
+    margin-bottom: 2px;
+}
+.ViewResumee.gray .company {
+    margin-top: 0px;
+    color: rgb(160, 160, 160);
+    text-indent: 10px;
+    font-style: italic;
+}
+
+.ViewResumee.gray .date {
+    color: rgb(117, 117, 117);
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.ViewResumee.gray .technologies-title {
+    margin-left: 10px;
+    color: rgb(117, 117, 117);
+}
+
+.ViewResumee.gray .technologies {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ViewResumee.gray .technologies li {
+    margin: 5px;
+    background-color: rgba(172, 180, 171,0.1);
+    color: rgba(172, 180, 171);
+    padding: 3px 5px;
+    font-style: italic;
+    border-radius: 4px;
+}
+
+.ViewResumee.gray .city-country {
+    font-weight: bolder;
+    color: rgb(117, 117, 117);
+    font-style: italic;
+}
+
+.ViewResumee.gray .location {
+    margin-left: 10px;
+    color: rgb(117, 117, 117);
+}
+
+.ViewResumee.gray .sub-title {
+    color: rgba(172, 180, 171,0.8);
+    margin-top: 60px;
+    border-bottom:  2px solid rgba(172, 180, 171,0.8);;
+    max-width: 80%;
+}
+
+.ViewResumee.gray .resumee h3, .ViewResumee.gray .resumee h4, .ViewResumee.gray .resumee h5, .ViewResumee.gray .resumee p, .ViewResumee.gray .resumee div {
+    margin-left: 20px;
+}
+
+.ViewResumee.gray .icon {
+    filter: brightness(0) saturate(100%) invert(69%) sepia(0%) saturate(654%) hue-rotate(333deg) brightness(104%) contrast(85%);
+}
+
+.ViewResumee.gray {
+    border: 4px solid rgba(172, 180, 171);
+}
+
+.ViewResumee.gray .pdf-icon{
+    filter: brightness(0) saturate(100%) invert(69%) sepia(0%) saturate(654%) hue-rotate(333deg) brightness(104%) contrast(85%);
+}

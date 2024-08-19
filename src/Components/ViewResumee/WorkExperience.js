@@ -1,4 +1,4 @@
-import "./WorkExperience.css";
+// import "./WorkExperience.css";
 import React from 'react';
 
 function WorkExperience({job}) {

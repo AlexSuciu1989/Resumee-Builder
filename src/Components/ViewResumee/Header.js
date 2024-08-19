@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { DataContext } from "./DataContex"
-import './Header.css'
+// import './Header.css'
 
 import mail from "./ico/envelope-solid.svg";
-import home from "./ico/location-dot-solid.svg";
+import home from "./ico/location-white.svg";
 import phone from "./ico/phone-solid.svg";
 import website from "./ico/globe-solid.svg";
 import whatsapp from "./ico/whatsapp-brands-solid.svg";
@@ -23,7 +23,7 @@ function Header () {
                <h1 className="name" >{item.name}</h1>
                <div className="header-info">
                  <p>
-                   <img src={home} className="icon" alt="home icon"></img>
+                   <img src={home} className="icon" alt="home icon" itemType='svg'></img>
                    <span className="titles">Home:</span> {item.home}
                  </p>
                  <p>

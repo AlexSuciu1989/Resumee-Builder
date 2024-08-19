@@ -1,9 +1,45 @@
 .ViewResumee {
     margin: 20px;
-    padding: 20px;
+    padding: 20px 50px;
     border-radius: 20px;
     background-color: white;
-    border: 4px solid rgb(238, 107, 82);
+}
+
+
+.purple-button, .orange-button, .gray-button, .green-button, .blue-button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    margin: 5px;
+    transition: all 0.5s;
+}
+
+.purple-button:hover, .orange-button:hover, .gray-button:hover, .green-button:hover, .blue-button:hover {
+    opacity: 0.5;
+    transform: scale(1.1);
+    border: none;
+    cursor: pointer;
+}
+
+.purple-button {
+    background-color: rgba(177,68,183);
+}
+
+.orange-button {
+    background-color: rgba(238, 107, 82);
+}
+
+.gray-button {
+    background-color: rgba(172, 180, 171);
+}
+
+.green-button {
+    background-color: rgba(34, 168, 96);
+}
+
+.blue-button {
+    background-color: rgba(33, 150, 243);
 }
 
 .resumee-container{
@@ -46,16 +82,7 @@
     padding-right: 20px;
 }
 
-.sub-title {
-    color: rgba(177,68,183,0.8);
-    margin-top: 60px;
-    border-bottom:  2px solid rgba(177,68,183,0.8);;
-    max-width: 80%;
-}
 
-.resumee h3, .resumee h4, .resumee h5, .resumee p, .resumee div {
-    margin-left: 20px;
-}
 
 .close-resumee {
     position: absolute;
@@ -92,6 +119,28 @@
     cursor: pointer;
     transform: scale(1.1);
 }
+
+.education-and-training, .work-experience, .language-skills, .honours-and-awards, .driving-licence, .digital-skills, .projects{
+    margin-left: 30px;
+}
+
+.pdf-icon{
+    width: 40px;
+    height: 40px;
+    transition: all 0.5s;
+}
+
+.pdf-icon:hover{
+    opacity: 0.7;
+    transform: scale(1.1);
+    cursor:pointer;
+}
+
+.ViewResumee-colors-print{
+    display: flex;
+    justify-content: space-between;
+}
+
 
 @media only screen and (max-width: 710px) {
     .resumee-container {

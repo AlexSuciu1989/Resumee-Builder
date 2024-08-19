@@ -40,4 +40,23 @@
     background-color: white;
     color: rgb(111, 82, 238);
 }
+.login-register-subcontainer {
+    display: flex;
+    justify-content: center;
+}
+.login-container {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    border: 4px solid rgb(238, 107, 82);
+}
+
+.register-container {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    border: 4px solid rgb(238, 107, 82)
+}
 

@@ -1,0 +1,191 @@
+.ViewResumee.purple .digital-skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ViewResumee.purple .digital-skills ul li {
+    margin: 5px;
+    background-color: rgba(177,68,183,0.1);
+    color: rgba(177,68,183);
+    padding: 3px 5px;
+    font-style: italic;
+    border-radius: 4px;
+}
+
+.ViewResumee.purple .licence-type{
+    font-weight: bolder;
+    color:gray;
+}
+
+.ViewResumee.purple .licence{
+    margin: 5px;
+    background-color: rgba(177,68,183,0.1);
+    color: rgba(177,68,183);
+    padding: 3px 5px;
+    font-style: italic;
+    border-radius: 4px;
+}
+
+.ViewResumee.purple .edu-title {
+    margin-bottom: 2px;
+}
+
+.ViewResumee.purple .edu-school {
+    margin-top: 0px;
+    color: rgb(160, 160, 160);
+    text-indent: 10px;
+    font-style: italic;
+}
+
+.ViewResumee.purple .edu-location {
+    margin-left: 10px;
+    color: rgb(117, 117, 117);
+}
+
+.ViewResumee.purple .edu-city-country{
+    font-weight: bolder;
+    color: rgb(117, 117, 117);
+    font-style: italic;
+}
+
+
+.ViewResumee.purple .header-info div {
+    display: flex;
+    margin-top: 20px;
+}
+
+.ViewResumee.purple .header-info div p {
+    margin-right: 20px;
+}
+
+.ViewResumee.purple .titles {
+    font-weight: bold;
+}
+
+.ViewResumee.purple .icon {
+    max-width: 15px;
+    max-height: 15px;
+    margin-right: 4px;
+}
+
+.ViewResumee.purple .about-me-title {
+    color: rgba(177,68,183,0.8);
+}
+.ViewResumee.purple .about-me-desc {
+    text-indent: 3%;
+    text-align: justify;
+}
+
+.ViewResumee.purple .name {
+    color: rgba(177,68,183);
+}
+
+.ViewResumee.purple .honours-issuer{
+    margin-top: 0px;
+    color: rgb(160, 160, 160);
+    text-indent: 10px;
+    font-style: italic;
+}
+
+.ViewResumee.purple .language-type {
+    font-weight: bolder;
+}
+
+.ViewResumee.purple .language-first-row, .ViewResumee.purple .language-second-row{
+    display: flex;
+}
+
+.ViewResumee.purple .language-headers {
+    font-weight: bolder;
+    color: gray;
+    margin-left: 10px;
+    background-color: white;
+}
+
+.ViewResumee.purple .language-levels {
+    margin: 5px;
+    background-color: rgba(177,68,183,0.1);
+    color: rgba(177,68,183);
+    padding: 3px 5px;
+    font-style: italic;
+    border-radius: 4px;
+}
+
+.ViewResumee.purple .project-title {
+    margin-bottom: 2px;
+}
+
+.ViewResumee.purple .work-experience {
+    margin-bottom: 60px;
+}
+.ViewResumee.purple .position {
+    margin-bottom: 2px;
+}
+.ViewResumee.purple .company {
+    margin-top: 0px;
+    color: rgb(160, 160, 160);
+    text-indent: 10px;
+    font-style: italic;
+}
+
+.ViewResumee.purple .date {
+    color: rgb(117, 117, 117);
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.ViewResumee.purple .technologies-title {
+    margin-left: 10px;
+    color: rgb(117, 117, 117);
+}
+
+.ViewResumee.purple .technologies {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ViewResumee.purple .technologies li {
+    margin: 5px;
+    background-color: rgba(177,68,183,0.1);
+    color: rgba(177,68,183);
+    padding: 3px 5px;
+    font-style: italic;
+    border-radius: 4px;
+}
+
+.ViewResumee.purple .city-country {
+    font-weight: bolder;
+    color: rgb(117, 117, 117);
+    font-style: italic;
+}
+
+.ViewResumee.purple .location {
+    margin-left: 10px;
+    color: rgb(117, 117, 117);
+}
+
+.ViewResumee.purple .sub-title {
+    color: rgba(177,68,183,0.8);
+    margin-top: 60px;
+    border-bottom:  2px solid rgba(177,68,183,0.8);;
+    max-width: 80%;
+}
+
+.ViewResumee.purple .resumee h3, .ViewResumee.purple .resumee h4, .ViewResumee.purple .resumee h5, .ViewResumee.purple .resumee p, .ViewResumee.purple .resumee div {
+    margin-left: 20px;
+}
+
+.icon {
+    filter: brightness(0) saturate(100%) invert(35%) sepia(51%) saturate(1530%) hue-rotate(263deg) brightness(92%) contrast(90%);
+}
+
+.ViewResumee.purple {
+    border: 4px solid rgba(177,68,183);
+}
+
+.ViewResumee.purple .pdf-icon{
+    filter: brightness(0) saturate(100%) invert(35%) sepia(51%) saturate(1530%) hue-rotate(263deg) brightness(92%) contrast(90%);
+}

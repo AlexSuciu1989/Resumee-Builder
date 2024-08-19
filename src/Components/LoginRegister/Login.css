@@ -1,0 +1,32 @@
+
+#login-account, #login-password {
+    min-height: 20px;
+    padding: 8px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(238, 107, 82, 0.5);
+    margin: 10px 50px;
+}
+
+#login-account:focus, #login-password:focus {
+    border: 2px solid rgb(238, 107, 82);
+    outline: none;
+}
+
+.LoginButton {
+    background-color: rgb(238, 107, 82);
+    border: 2px solid rgb(238, 107, 82);
+    padding: 5px 10px;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bolder;
+    margin: 15px;
+    transition: all 0.2s ease-in;
+}
+
+.LoginButton:hover {
+    cursor: pointer;
+    background-color: white;
+    color: rgb(238, 107, 82);
+}

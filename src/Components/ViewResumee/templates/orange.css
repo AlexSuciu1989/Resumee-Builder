@@ -1,0 +1,191 @@
+.ViewResumee.orange .digital-skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ViewResumee.orange .digital-skills ul li {
+    margin: 5px;
+    background-color: rgba(238, 107, 82,0.1);
+    color: rgba(238, 107, 82);
+    padding: 3px 5px;
+    font-style: italic;
+    border-radius: 4px;
+}
+
+.ViewResumee.orange .licence-type{
+    font-weight: bolder;
+    color:gray;
+}
+
+.ViewResumee.orange .licence{
+    margin: 5px;
+    background-color: rgba(238, 107, 82,0.1);
+    color: rgba(238, 107, 82);
+    padding: 3px 5px;
+    font-style: italic;
+    border-radius: 4px;
+}
+
+.ViewResumee.orange .edu-title {
+    margin-bottom: 2px;
+}
+
+.ViewResumee.orange .edu-school {
+    margin-top: 0px;
+    color: rgb(160, 160, 160);
+    text-indent: 10px;
+    font-style: italic;
+}
+
+.ViewResumee.orange .edu-location {
+    margin-left: 10px;
+    color: rgb(117, 117, 117);
+}
+
+.ViewResumee.orange .edu-city-country{
+    font-weight: bolder;
+    color: rgb(117, 117, 117);
+    font-style: italic;
+}
+
+
+.ViewResumee.orange .header-info div {
+    display: flex;
+    margin-top: 20px;
+}
+
+.ViewResumee.orange .header-info div p {
+    margin-right: 20px;
+}
+
+.ViewResumee.orange .titles {
+    font-weight: bold;
+}
+
+.ViewResumee.orange .icon {
+    max-width: 15px;
+    max-height: 15px;
+    margin-right: 4px;
+}
+
+.ViewResumee.orange .about-me-title {
+    color: rgba(238, 107, 82,0.8);
+}
+.ViewResumee.orange .about-me-desc {
+    text-indent: 3%;
+    text-align: justify;
+}
+
+.ViewResumee.orange .name {
+    color: rgba(238, 107, 82);
+}
+
+.ViewResumee.orange .honours-issuer{
+    margin-top: 0px;
+    color: rgb(160, 160, 160);
+    text-indent: 10px;
+    font-style: italic;
+}
+
+.ViewResumee.orange .language-type {
+    font-weight: bolder;
+}
+
+.ViewResumee.orange .language-first-row, .ViewResumee.orange .language-second-row{
+    display: flex;
+}
+
+.ViewResumee.orange .language-headers {
+    font-weight: bolder;
+    color: gray;
+    margin-left: 10px;
+    background-color: white;
+}
+
+.ViewResumee.orange .language-levels {
+    margin: 5px;
+    background-color: rgba(238, 107, 82,0.1);
+    color: rgb(252, 0, 0);
+    padding: 3px 5px;
+    font-style: italic;
+    border-radius: 4px;
+}
+
+.ViewResumee.orange .project-title {
+    margin-bottom: 2px;
+}
+
+.ViewResumee.orange .work-experience {
+    margin-bottom: 60px;
+}
+.ViewResumee.orange .position {
+    margin-bottom: 2px;
+}
+.ViewResumee.orange .company {
+    margin-top: 0px;
+    color: rgb(160, 160, 160);
+    text-indent: 10px;
+    font-style: italic;
+}
+
+.ViewResumee.orange .date {
+    color: rgb(117, 117, 117);
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.ViewResumee.orange .technologies-title {
+    margin-left: 10px;
+    color: rgb(117, 117, 117);
+}
+
+.ViewResumee.orange .technologies {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ViewResumee.orange .technologies li {
+    margin: 5px;
+    background-color: rgba(238, 107, 82,0.1);
+    color: rgba(238, 107, 82);
+    padding: 3px 5px;
+    font-style: italic;
+    border-radius: 4px;
+}
+
+.ViewResumee.orange .city-country {
+    font-weight: bolder;
+    color: rgb(117, 117, 117);
+    font-style: italic;
+}
+
+.ViewResumee.orange .location {
+    margin-left: 10px;
+    color: rgb(117, 117, 117);
+}
+
+.ViewResumee.orange .sub-title {
+    color: rgba(238, 107, 82,0.8);
+    margin-top: 60px;
+    border-bottom:  2px solid rgba(238, 107, 82,0.8);;
+    max-width: 80%;
+}
+
+.ViewResumee.orange .resumee h3, .ViewResumee.orange .resumee h4, .ViewResumee.orange .resumee h5, .ViewResumee.orange .resumee p, .ViewResumee.orange .resumee div {
+    margin-left: 20px;
+}
+
+.ViewResumee.orange .icon {
+    filter: brightness(0) saturate(100%) invert(51%) sepia(50%) saturate(2245%) hue-rotate(330deg) brightness(102%) contrast(87%);
+}
+
+.ViewResumee.orange {
+    border: 4px solid rgba(238, 107, 82);
+}
+
+.ViewResumee.orange .pdf-icon {
+    filter: brightness(0) saturate(100%) invert(51%) sepia(50%) saturate(2245%) hue-rotate(330deg) brightness(102%) contrast(87%);
+}

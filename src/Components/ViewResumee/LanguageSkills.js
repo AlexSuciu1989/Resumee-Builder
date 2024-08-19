@@ -1,13 +1,13 @@
-import "./LanguageSkills.css";
+// import "./LanguageSkills.css";
 
 function LanguageSkills({ language }) {
   return (
-    <div>
+    <div className="language-skills">
       <p>
         <span className="language-type">{language.language_type}:</span>{" "}
         {language.language}
       </p>
-      {language.language_type === "Mother tongue(s)" ? null : (
+      {language.language_type === "Mother tongue" ? null : (
         <>
           <div className="language-first-row">
             <p>

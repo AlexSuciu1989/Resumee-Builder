@@ -1,4 +1,4 @@
-import "./EducationAndTraining.css";
+// import "./EducationAndTraining.css";
 
 function EducationAndTraining({ edu }) {
   return (
@@ -7,9 +7,9 @@ function EducationAndTraining({ edu }) {
         {edu.title}{" "}
         <span className="date">
           [{" "}
-          {edu.to === edu.from || edu.to === ""
-            ? `${edu.from}`
-            : `${edu.to} - ${edu.from}`}{" "}
+          {edu.date_to === edu.date_from || edu.date_to === ""
+            ? `${edu.date_from}`
+            : `${edu.date_to} - ${edu.date_from}`}{" "}
           ]
         </span>
       </h3>

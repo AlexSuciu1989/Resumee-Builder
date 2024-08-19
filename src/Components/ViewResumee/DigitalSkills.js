@@ -1,11 +1,8 @@
-import "./DigitalSkills.css";
+// import "./DigitalSkills.css";
 
 const DigitalSkills = ({ skills }) => {
-  return (
-    <div className="digital-skills">
-          <li>{skills.skill}</li>
-
-    </div>
+  return ( 
+          <li className="digital-skills">{skills.skill}</li>
   );
 };
 

@@ -1,14 +1,16 @@
-import "./Logout.css"
+import "./Logout.css";
+import Cookies from "js-cookie";
 
 
 function Logout () {
 
-    const handleClick = () => {
-   
+    const cookiesRemove = () => {
+        Cookies.remove("username");
+        window.location.reload();
     }
 
     return (
-        <button className="logout-button" onClick={handleClick}>Logout</button>
+        <button className="logout-button" onClick={cookiesRemove}>Logout</button>
     )
 }
 

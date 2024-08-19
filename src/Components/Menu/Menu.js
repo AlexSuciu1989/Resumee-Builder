@@ -22,8 +22,8 @@ function Menu () {
     return (
         <div className="Menu">
             <div className="Menu-button-container">
-                <button onClick={handleClick} className="Menu-button">Create Resumee</button>
-                <button onClick ={handleViewClick} className="Menu-button">View Resumee</button>
+                <button onClick={handleClick} className="Menu-button">Create or Edit your Resumee</button>
+                <button onClick ={handleViewClick} className="Menu-button">View your Resumee</button>
             </div>
 
             <div className={`create-cv-container ${popupVisible ? 'hidden' : 'visible'}`}>

@@ -1,0 +1,191 @@
+.ViewResumee.blue .digital-skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ViewResumee.blue .digital-skills ul li {
+    margin: 5px;
+    background-color: rgba(33, 150, 243,0.1);
+    color: rgba(33, 150, 243);
+    padding: 3px 5px;
+    font-style: italic;
+    border-radius: 4px;
+}
+
+.ViewResumee.blue .licence-type{
+    font-weight: bolder;
+    color:gray;
+}
+
+.ViewResumee.blue .licence{
+    margin: 5px;
+    background-color: rgba(33, 150, 243,0.1);
+    color: rgba(33, 150, 243);
+    padding: 3px 5px;
+    font-style: italic;
+    border-radius: 4px;
+}
+
+.ViewResumee.blue .edu-title {
+    margin-bottom: 2px;
+}
+
+.ViewResumee.blue .edu-school {
+    margin-top: 0px;
+    color: rgb(160, 160, 160);
+    text-indent: 10px;
+    font-style: italic;
+}
+
+.ViewResumee.blue .edu-location {
+    margin-left: 10px;
+    color: rgb(117, 117, 117);
+}
+
+.ViewResumee.blue .edu-city-country{
+    font-weight: bolder;
+    color: rgb(117, 117, 117);
+    font-style: italic;
+}
+
+
+.ViewResumee.blue .header-info div {
+    display: flex;
+    margin-top: 20px;
+}
+
+.ViewResumee.blue .header-info div p {
+    margin-right: 20px;
+}
+
+.ViewResumee.blue .titles {
+    font-weight: bold;
+}
+
+.ViewResumee.blue .icon {
+    max-width: 15px;
+    max-height: 15px;
+    margin-right: 4px;
+}
+
+.ViewResumee.blue .about-me-title {
+    color: rgba(33, 150, 243,0.8);
+}
+.ViewResumee.blue .about-me-desc {
+    text-indent: 3%;
+    text-align: justify;
+}
+
+.ViewResumee.blue .name {
+    color: rgba(33, 150, 243);
+}
+
+.ViewResumee.blue .honours-issuer{
+    margin-top: 0px;
+    color: rgb(160, 160, 160);
+    text-indent: 10px;
+    font-style: italic;
+}
+
+.ViewResumee.blue .language-type {
+    font-weight: bolder;
+}
+
+.ViewResumee.blue .language-first-row, .ViewResumee.blue .language-second-row{
+    display: flex;
+}
+
+.ViewResumee.blue .language-headers {
+    font-weight: bolder;
+    color: gray;
+    margin-left: 10px;
+    background-color: white;
+}
+
+.ViewResumee.blue .language-levels {
+    margin: 5px;
+    background-color: rgba(33, 150, 243,0.1);
+    color: rgba(33, 150, 243);
+    padding: 3px 5px;
+    font-style: italic;
+    border-radius: 4px;
+}
+
+.ViewResumee.blue .project-title {
+    margin-bottom: 2px;
+}
+
+.ViewResumee.blue .work-experience {
+    margin-bottom: 60px;
+}
+.ViewResumee.blue .position {
+    margin-bottom: 2px;
+}
+.ViewResumee.blue .company {
+    margin-top: 0px;
+    color: rgb(160, 160, 160);
+    text-indent: 10px;
+    font-style: italic;
+}
+
+.ViewResumee.blue .date {
+    color: rgb(117, 117, 117);
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.ViewResumee.blue .technologies-title {
+    margin-left: 10px;
+    color: rgb(117, 117, 117);
+}
+
+.ViewResumee.blue .technologies {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ViewResumee.blue .technologies li {
+    margin: 5px;
+    background-color: rgba(33, 150, 243,0.1);
+    color: rgba(33, 150, 243);
+    padding: 3px 5px;
+    font-style: italic;
+    border-radius: 4px;
+}
+
+.ViewResumee.blue .city-country {
+    font-weight: bolder;
+    color: rgb(117, 117, 117);
+    font-style: italic;
+}
+
+.ViewResumee.blue .location {
+    margin-left: 10px;
+    color: rgb(117, 117, 117);
+}
+
+.ViewResumee.blue .sub-title {
+    color: rgba(33, 150, 243,0.8);
+    margin-top: 60px;
+    border-bottom:  2px solid rgba(33, 150, 243,0.8);;
+    max-width: 80%;
+}
+
+.ViewResumee.blue .resumee h3, .ViewResumee.blue .resumee h4, .ViewResumee.blue .resumee h5, .ViewResumee.blue .resumee p, .ViewResumee.blue .resumee div {
+    margin-left: 20px;
+}
+
+.ViewResumee.blue .icon {
+    filter: brightness(0) saturate(100%) invert(45%) sepia(42%) saturate(3200%) hue-rotate(187deg) brightness(102%) contrast(91%);
+}
+
+.ViewResumee.blue {
+    border: 4px solid rgba(33, 150, 243);
+}
+
+.ViewResumee.blue .pdf-icon{
+    filter: brightness(0) saturate(100%) invert(45%) sepia(42%) saturate(3200%) hue-rotate(187deg) brightness(102%) contrast(91%);
+}

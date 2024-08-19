@@ -1,0 +1,56 @@
+#register-account, #register-email, #register-phone, #register-password, #confirm_password {
+    min-height: 20px;
+    padding: 8px;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(111, 82, 238, 0.5);
+    margin: 10px 50px;
+}
+
+#register-account:focus, #register-email:focus, #register-phone:focus, #register-password:focus, #confirm_password:focus {
+    border: 2px solid rgb(111, 82, 238);
+    outline: none;
+}
+
+.register-subcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border:none;
+}
+
+.register-submit-button {
+    background-color: rgb(238, 107, 82);
+    border: 2px solid rgb(238, 107, 82);
+    padding: 5px 10px;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bolder;
+    margin: 15px;
+    transition: all 0.2s ease-in;
+}
+
+.register-submit-button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: rgb(238, 107, 82);
+}
+
+.register-cancel-button {
+    background-color: rgb(111, 82, 238);
+    border: 2px solid rgb(111, 82, 238);
+    padding: 5px 10px;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bolder;
+    margin: 15px;
+    transition: all 0.2s ease-in;
+}
+
+.register-cancel-button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: rgb(111, 82, 238);
+}

@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "./Register.css"
 
 function Register() {
     const [formData, setFormData] = useState({
@@ -11,22 +12,29 @@ function Register() {
     });
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
+    const [passwordMatch, setPasswordMatch] = useState(true); // State to track password match
 
     // Handle form field changes
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
+
+        // Real-time password confirmation check
+        if (name === "password" || name === "confirmPassword") {
+            setPasswordMatch(value === formData.password || value === formData.confirmPassword);
+        }
     };
 
     // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData)
+        
+        // Final check before submission
         if (formData.password !== formData.confirmPassword) {
             setError("Passwords do not match.");
             return;
         }
-        
+
         setError("");
         setSuccess("");
 
@@ -51,7 +59,7 @@ function Register() {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="register-subcontainer">
                 <div>
                     <label>Username</label>
                     <input
@@ -61,7 +69,6 @@ function Register() {
                         placeholder="Choose an account name"
                         value={formData.account}
                         onChange={handleChange}
-    
                     />
                 </div>
                 <div>
@@ -73,7 +80,6 @@ function Register() {
                         placeholder="Enter a valid email address"
                         value={formData.email}
                         onChange={handleChange}
-
                     />
                 </div>
                 <div>
@@ -85,7 +91,6 @@ function Register() {
                         placeholder="Enter a valid phone number"
                         value={formData.phone}
                         onChange={handleChange}
-
                     />
                 </div>
                 <div>
@@ -97,6 +102,7 @@ function Register() {
                         placeholder="Password"
                         value={formData.password}
                         onChange={handleChange}
+                        style={{ borderColor: !passwordMatch ? "red" : "" }}  // Conditional styling
                     />
                 </div>
                 <div>
@@ -108,12 +114,19 @@ function Register() {
                         placeholder="Confirm Password"
                         value={formData.confirmPassword}
                         onChange={handleChange}
-
+                        style={{ borderColor: !passwordMatch ? "red" : "" }}  // Conditional styling
                     />
                 </div>
-                <div>
-                    <button type="submit" className="LoginButton">Create new account</button>
-                    <button type="button" className="LoginButton" onClick={() => setFormData({ account: "", email: "", phone: "", password: "", confirmPassword: "" })}>
+                {!passwordMatch && <p style={{ color: "red" }}>Passwords do not match.</p>}  {/* Error message */}
+                <div className="register-buttons">
+                    <button type="submit" className="register-submit-button" disabled={!passwordMatch}>
+                        Create new account
+                    </button>
+                    <button
+                        type="button"
+                        className="register-cancel-button"
+                        onClick={() => setFormData({ account: "", email: "", phone: "", password: "", confirmPassword: "" })}
+                    >
                         Cancel
                     </button>
                 </div>

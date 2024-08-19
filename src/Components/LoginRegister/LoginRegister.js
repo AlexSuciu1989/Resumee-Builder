@@ -33,7 +33,7 @@ function LoginRegister() {
     };
 
     return (
-        <div>
+        <div className="login-register-container">
             {!loginSuccess && (
                 <div className="loginRegister-button-container">
                     <button className="loginRegister-button" onClick={handleClickLogin}>
@@ -44,11 +44,13 @@ function LoginRegister() {
                     </button>
                 </div>
             )}
-            <div className={`login-container ${isVisibleLogin ? 'visible' : 'hidden'}`}>
-                <Login onLoginSuccess={handleLoginSuccess} />
-            </div>
-            <div className={`register-container ${isVisibleRegister ? 'visible' : 'hidden'}`}>
-                <Register />
+            <div className="login-register-subcontainer">
+                <div className={`login-container ${isVisibleLogin ? 'visible' : 'hidden'}`}>
+                    <Login onLoginSuccess={handleLoginSuccess} />
+                </div>
+                <div className={`register-container ${isVisibleRegister ? 'visible' : 'hidden'}`}>
+                    <Register />
+                </div>
             </div>
             {loginSuccess && (
                 <div className="username-info">

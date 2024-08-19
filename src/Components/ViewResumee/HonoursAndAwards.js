@@ -1,4 +1,4 @@
-import "./HonoursAndAwards.css";
+// import "./HonoursAndAwards.css";
 
 function HonoursAndAwards({ honor }) {
   const createMarkup = (html) => {
@@ -6,7 +6,7 @@ function HonoursAndAwards({ honor }) {
   };
 
   return (
-    <div>
+    <div className="honours-and-awards">
       <h3 className="honours-title">
         {honor.title}
         <span className="date"> [ {honor.date}] </span>

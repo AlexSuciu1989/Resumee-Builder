@@ -7,3 +7,9 @@ html {
   margin: 30px;
   width: 95%;
 }
+
+@media print {
+  html {
+    background-color: white;
+  }
+}

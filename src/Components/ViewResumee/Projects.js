@@ -1,10 +1,10 @@
-import "./Projects.css";
+// import "./Projects.css";
 import React from 'react';
 
 function Projects({ project }) {
 
   return (
-    <div>
+    <div className='projects'>
       <h3 className="projects-title">
         {project.title}{" "}
         <span className="date">
