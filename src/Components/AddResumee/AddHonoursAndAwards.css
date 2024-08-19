@@ -1,4 +1,4 @@
-.AddHeader {
+.AddHonours {
     display: flex;
     flex-direction: column;
     border-radius: 15px;
@@ -8,7 +8,7 @@
     box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.2);
 }
 
-.AddHeader-input {
+.AddHonours-input {
     margin: 10px;
     min-height: 20px;
     padding: 8px;
@@ -17,20 +17,20 @@
     border: 1px solid rgb(238, 107, 82, 0.5);
 }
 
-.AddHeader-input:focus {
+.AddHonours-input:focus {
     border: 2px solid rgb(238, 107, 82);
     outline: none;
 }
 
-.AddHeader textarea {
+.AddHonours textarea {
     resize: vertical;
 }
 
-.AddHeader-subcontainer {
+.AddHonours-subcontainer {
     display: flex;
     flex-direction: column;
 }
-.AddHeader-subcontainer label {
+.AddHonours-subcontainer label {
     margin-left: 15px;
     color:rgb(238, 107, 82);
     margin-bottom: 0;
@@ -39,7 +39,7 @@
     margin-top: 15px;
 }
 
-.AddHeader-container {
+.AddHonours-container {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -47,14 +47,12 @@
     flex-wrap: wrap;
 }
 
-.AddHeader-container > * {
+.AddHonours-container > * {
     flex: 1;
 }
 
-.name-container {
-    max-width: 30%;
-}
 
-#about_me{
+
+.AddHonours-description{
     min-height: 150px;
 }

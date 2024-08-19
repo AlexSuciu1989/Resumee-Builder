@@ -1,10 +1,19 @@
 import './App.css';
-import AddResumee from './Components/AddResumee/AddResumee';
+import Menu from './Components/Menu/Menu';
+import LoginRegister from './Components/LoginRegister/LoginRegister';
+import DisplayUsername from './Components/LoginRegister/DisplayUsername';
+import Cookies from 'js-cookie';
 
 function App() {
+
   return (
     <div className="App">
-      <AddResumee/>
+      <div className='Menu-container'>
+        {(!Cookies.get("username") ? 
+        <LoginRegister/> : <Menu/>)}
+          
+        <DisplayUsername username={Cookies.get('username')}/>
+      </div>
     </div>
   );
 }

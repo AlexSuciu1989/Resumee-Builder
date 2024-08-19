@@ -1,0 +1,21 @@
+.edu-title {
+    margin-bottom: 2px;
+}
+
+.edu-school {
+    margin-top: 0px;
+    color: rgb(160, 160, 160);
+    text-indent: 10px;
+    font-style: italic;
+}
+
+.edu-location {
+    margin-left: 10px;
+    color: rgb(117, 117, 117);
+}
+
+.edu-city-country{
+    font-weight: bolder;
+    color: rgb(117, 117, 117);
+    font-style: italic;
+}

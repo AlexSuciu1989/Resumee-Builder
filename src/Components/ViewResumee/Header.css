@@ -1,0 +1,31 @@
+
+.header-info div {
+    display: flex;
+    margin-top: 20px;
+}
+
+.header-info div p {
+    margin-right: 20px;
+}
+
+.titles {
+    font-weight: bold;
+}
+
+.icon {
+    max-width: 15px;
+    max-height: 15px;
+    margin-right: 4px;
+}
+
+.about-me-title {
+    color: rgba(177,68,183,0.8);
+}
+.about-me-desc {
+    text-indent: 3%;
+    text-align: justify;
+}
+
+.name {
+    color: rgba(177,68,183);
+}

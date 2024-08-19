@@ -1,0 +1,16 @@
+
+
+.digital-skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.digital-skills ul li {
+    margin: 5px;
+    background-color: rgba(177,68,183,0.1);
+    color: rgba(177,68,183);
+    padding: 3px 5px;
+    font-style: italic;
+    border-radius: 4px;
+}

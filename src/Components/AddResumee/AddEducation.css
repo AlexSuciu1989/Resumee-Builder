@@ -1,4 +1,4 @@
-.AddHeader {
+.AddEducation {
     display: flex;
     flex-direction: column;
     border-radius: 15px;
@@ -8,7 +8,7 @@
     box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.2);
 }
 
-.AddHeader-input {
+.AddEducation-input {
     margin: 10px;
     min-height: 20px;
     padding: 8px;
@@ -17,20 +17,20 @@
     border: 1px solid rgb(238, 107, 82, 0.5);
 }
 
-.AddHeader-input:focus {
+.AddEducation-input:focus {
     border: 2px solid rgb(238, 107, 82);
     outline: none;
 }
 
-.AddHeader textarea {
+.AddEducation textarea {
     resize: vertical;
 }
 
-.AddHeader-subcontainer {
+.AddEducation-subcontainer {
     display: flex;
     flex-direction: column;
 }
-.AddHeader-subcontainer label {
+.AddEducation-subcontainer label {
     margin-left: 15px;
     color:rgb(238, 107, 82);
     margin-bottom: 0;
@@ -39,7 +39,7 @@
     margin-top: 15px;
 }
 
-.AddHeader-container {
+.AddEducation-container {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -47,14 +47,10 @@
     flex-wrap: wrap;
 }
 
-.AddHeader-container > * {
+.AddEducation-container > * {
     flex: 1;
 }
 
-.name-container {
-    max-width: 30%;
-}
-
-#about_me{
+.AddEducation-description {
     min-height: 150px;
 }
