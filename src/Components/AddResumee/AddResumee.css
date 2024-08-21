@@ -65,3 +65,21 @@
     background-color: white;
     color: rgb(111, 82, 238);
 }
+
+.delete-button {
+    width: 60px;
+    margin: 0 auto;
+    margin-right: 15px;
+    background-color: rgb(111, 82, 238, 0.5);
+    border: none;
+    border-radius: 5px;
+    color:white;
+    padding: 5px;
+    transition: transform 0.02s, background-color 0.2s;
+}
+
+.delete-button:hover {
+    background-color: rgb(111, 82, 238, 0.8);
+    transform: scale(1.05);
+    cursor: pointer;
+}

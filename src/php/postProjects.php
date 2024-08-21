@@ -30,11 +30,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $date_to = $jsonData['date_to'];
         $description = $jsonData['description'];
 
-        if ($id) {
+        if ($id && $title) {
             $sql = "UPDATE `cv-projects` SET `user` = ?, `title` = ?, `date_from` = ?, `date_to` = ?, `description` = ? WHERE `id` = ? ";
             $stmt = mysqli_prepare($conn, $sql);
             mysqli_stmt_bind_param($stmt, "ssssss", $user, $title, $date_from, $date_to, $description, $id);
-
+        } elseif ($id && ($title === null || $title === "")) {
+            // Delete record
+            $sql = "DELETE FROM `cv-projects` WHERE `id` = ?";
+            $stmt = mysqli_prepare($conn, $sql);
+            mysqli_stmt_bind_param($stmt, "s", $id);
         } else {
             $sql = "INSERT INTO `cv-projects` (`user`, `title`, `date_from`, `date_to`, `description`) 
             VALUES (?, ?, ?, ?, ?)";

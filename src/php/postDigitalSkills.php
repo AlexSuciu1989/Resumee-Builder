@@ -27,11 +27,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user = $jsonData['user'];
         $skill = $jsonData['skill'];
 
-        if ($id) {
+        if ($id && $skill) {
             $sql = "UPDATE `cv-digital-skills` SET `user` = ?, `skill` = ? WHERE `id` = ? ";
             $stmt = mysqli_prepare($conn, $sql);
             mysqli_stmt_bind_param($stmt, "sss", $user, $skill, $id);
-
+        } elseif ($id && ($skill === null || $skill === "")) {
+            // Delete record
+            $sql = "DELETE FROM `cv-digital-skills` WHERE `id` = ?";
+            $stmt = mysqli_prepare($conn, $sql);
+            mysqli_stmt_bind_param($stmt, "s", $id);
         } else {
         $sql = "INSERT INTO `cv-digital-skills` (`user`, `skill`) 
                 VALUES (?, ?)";

@@ -59,7 +59,8 @@ function Header () {
                  </div>
          
                  <h2 className="about-me-title sub-title">ABOUT ME</h2>
-                 <p className='about-me-desc'>{item.about_me}</p>
+                 <p className='about-me-desc' dangerouslySetInnerHTML={{ __html: item.about_me.replace(/\n/g, '<br/>') }} />
+               
                </div>
              </div>
     ))}

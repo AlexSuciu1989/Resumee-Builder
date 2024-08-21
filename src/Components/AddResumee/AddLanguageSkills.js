@@ -1,7 +1,7 @@
 import React from "react";
 import './AddLanguageSkills.css'
 
-function AddLanguageSkills({ index, language, handleLanguageChange }) {
+function AddLanguageSkills({ index, language, handleLanguageChange, handleDeleteLanguage }) {
     const handleChange = (e) => {
         const { id, value } = e.target;
         handleLanguageChange(index, id, value);
@@ -9,6 +9,7 @@ function AddLanguageSkills({ index, language, handleLanguageChange }) {
 
     return (
         <div className="AddLanguageSkills">
+            <button onClick={() => handleDeleteLanguage(index, language.id)} className="delete-button">Delete</button>
             <div className="AddLanguageSkills-container">
                 <div className="AddLanguageSkills-subcontainer">
                     <label>Language Type</label>

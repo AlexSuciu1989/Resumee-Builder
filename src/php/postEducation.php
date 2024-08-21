@@ -34,10 +34,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $website = $jsonData['website'];
         $description = $jsonData['description'];
 
-        if ($id) {
+        if ($id && $title) {
             $sql = "UPDATE `cv-education-and-training` SET `user` = ?, `title` = ?, `date_from` = ?, `date_to` = ?, `school_or_trainer` = ?, `city` = ?, `country` = ?, `website` = ?, `description` = ? WHERE `id` = ? ";
             $stmt = mysqli_prepare($conn, $sql);
             mysqli_stmt_bind_param($stmt, "ssssssssss", $user, $title, $date_from, $date_to, $school_or_trainer, $city, $country, $website, $description, $id);
+        } elseif ($id && ($title === null || $title === "")) {
+            // Delete record
+            $sql = "DELETE FROM `cv-education-and-training` WHERE `id` = ?";
+            $stmt = mysqli_prepare($conn, $sql);
+            mysqli_stmt_bind_param($stmt, "s", $id);
         } else {
             $sql = "INSERT INTO `cv-education-and-training` (`user`, `title`, `date_from`, `date_to`, `school_or_trainer`, `city`, `country`, `website`, `description`) 
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";

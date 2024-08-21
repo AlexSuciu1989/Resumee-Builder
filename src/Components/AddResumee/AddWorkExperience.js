@@ -1,7 +1,8 @@
 import React from "react";
 import './AddWorkExperience.css'
 
-function AddWorkExperience({ index, experience, handleExperienceChange }) {
+function AddWorkExperience({ index, experience, handleExperienceChange, handleDeleteExperience }) {
+
     const handleChange = (e) => {
         const { id, value } = e.target;
         handleExperienceChange(index, id, value);
@@ -9,6 +10,7 @@ function AddWorkExperience({ index, experience, handleExperienceChange }) {
 
     return (
         <div className="AddWorkExperience">
+            <button onClick={() => handleDeleteExperience(index, experience.id)} className="delete-button">Delete</button>
             <div className="AddWorkExperience-subcontainer">
                 <label>Position</label>
                 <input type="text" className="AddWorkExperience-input" placeholder="Position" id="position" value={experience.position} onChange={handleChange} />
@@ -20,11 +22,11 @@ function AddWorkExperience({ index, experience, handleExperienceChange }) {
             <div className="AddWorkExperience-container">
                 <div className="AddWorkExperience-subcontainer">
                     <label>Starting Date</label>
-                    <input type="date" className="AddWorkExperience-input" id="date_from" value={experience.date_from} onChange={handleChange} />
+                    <input type="date" className="AddWorkExperience-input" id="date_from" value={experience.date_from === "0000-00-00" ? experience.date_from = "" : experience.date_from} onChange={handleChange} />
                 </div>
                 <div className="AddWorkExperience-subcontainer">
                     <label>Ending Date</label>
-                    <input type="date" className="AddWorkExperience-input" id="date_to" value={experience.date_to} onChange={handleChange} />
+                    <input type="date" className="AddWorkExperience-input" id="date_to" value={experience.date_to === "0000-00-00" ? experience.date_to = "" : experience.date_to} onChange={handleChange} />
                 </div>
             </div>
             <div className="AddWorkExperience-container">

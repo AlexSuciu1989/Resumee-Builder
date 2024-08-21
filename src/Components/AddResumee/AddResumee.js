@@ -61,6 +61,133 @@ function AddResumee() {
     const handleHonoursChange = (index, field, value) => { const newHonour = [...honours]; newHonour[index][field] = value; setHonours(newHonour); };
     const handleLicenseChange = (index, field, value) => { const newLicense = [...license]; newLicense[index][field] = value; setLicense(newLicense); };
 
+
+    const handleDeleteExperience = async (index, id) => {
+        const newWorkExperiences = [...workExperiences];
+        newWorkExperiences.splice(index, 1);  // Remove the item from the array
+        setWorkExperiences(newWorkExperiences);
+    
+        if (id) {
+            try {
+                await axios.post('https://alex-suciu.homebuddy.ro/resumee-builder/php/postWorkExperience.php', [{
+                    id: id,
+                    position: ""  // Set position to an empty string to trigger deletion
+                    
+                }]);
+            } catch (error) {
+                console.error("Error deleting experience:", error);
+            }
+        }
+    };
+
+    const handleDeleteEducation = async (index, id) => {
+        const newEducation = [...education];
+        newEducation.splice(index, 1);  // Remove the item from the array
+        setEducation(newEducation);
+    
+        if (id) {
+            try {
+                await axios.post('https://alex-suciu.homebuddy.ro/resumee-builder/php/postEducation.php', [{
+                    id: id,
+                    title: ""  // Set position to an empty string to trigger deletion
+                    
+                }]);
+            } catch (error) {
+                console.error("Error deleting experience:", error);
+            }
+        }
+    };
+
+    const handleDeleteLanguage = async (index, id) => {
+        const newLanguage = [...language];
+        newLanguage.splice(index, 1);  // Remove the item from the array
+        setLanguage(newLanguage);
+    
+        if (id) {
+            try {
+                await axios.post('https://alex-suciu.homebuddy.ro/resumee-builder/php/postLanguageSkills.php', [{
+                    id: id,
+                    language: ""  // Set position to an empty string to trigger deletion
+                    
+                }]);
+            } catch (error) {
+                console.error("Error deleting experience:", error);
+            }
+        }
+    };
+
+    const handleDeleteDigitalSkill = async (index, id) => {
+        const newSkill = [...digitalSkill];
+        newSkill.splice(index, 1);  // Remove the item from the array
+        setDigitalSkill(newSkill);
+    
+        if (id) {
+            try {
+                await axios.post('https://alex-suciu.homebuddy.ro/resumee-builder/php/postDigitalSkills.php', [{
+                    id: id,
+                    digitalSkill: ""  // Set position to an empty string to trigger deletion
+                    
+                }]);
+            } catch (error) {
+                console.error("Error deleting experience:", error);
+            }
+        }
+    };
+
+    const handleDeleteProject = async (index, id) => {
+        const newProject = [...projects];
+        newProject.splice(index, 1);  // Remove the item from the array
+        setProjects(newProject);
+    
+        if (id) {
+            try {
+                await axios.post('https://alex-suciu.homebuddy.ro/resumee-builder/php/postProjects.php', [{
+                    id: id,
+                    title: ""  // Set position to an empty string to trigger deletion
+                    
+                }]);
+            } catch (error) {
+                console.error("Error deleting experience:", error);
+            }
+        }
+    };
+
+    const handleDeleteHonour = async (index, id) => {
+        const newHonour = [...honours];
+        newHonour.splice(index, 1);  // Remove the item from the array
+        setHonours(newHonour);
+    
+        if (id) {
+            try {
+                await axios.post('https://alex-suciu.homebuddy.ro/resumee-builder/php/postHonoursAndAwards.php', [{
+                    id: id,
+                    title: ""  // Set position to an empty string to trigger deletion
+                    
+                }]);
+            } catch (error) {
+                console.error("Error deleting experience:", error);
+            }
+        }
+    };
+
+    const handleDeleteLicense = async (index, id) => {
+        const newLicense = [...license];
+        newLicense.splice(index, 1);  // Remove the item from the array
+        setLicense(newLicense);
+    
+        if (id) {
+            try {
+                await axios.post('https://alex-suciu.homebuddy.ro/resumee-builder/php/postDrivingLicense.php', [{
+                    id: id,
+                    license: ""  // Set position to an empty string to trigger deletion
+                    
+                }]);
+            } catch (error) {
+                console.error("Error deleting experience:", error);
+            }
+        }
+    };
+
     // Fetch user data from the database if it exists
     useEffect(() => {
         const fetchData = async () => {
@@ -96,14 +223,14 @@ function AddResumee() {
         e.preventDefault();
         const completeHeader = { ...header, user };
         try {
-            const headerResponse = await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postHeader.php", completeHeader);
-            const workExperienceResponse = await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postWorkExperience.php", workExperiences);
-            const educationResponse = await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postEducation.php", education);
-            const languageResponse = await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postLanguageSkills.php", language);
-            const digitalSkillResponse = await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postDigitalSkills.php", digitalSkill);
-            const projectsResponse = await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postProjects.php", projects);
-            const honoursResponse = await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postHonoursAndAwards.php", honours);
-            const licenseResponse = await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postDrivingLicense.php", license);
+            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postHeader.php", completeHeader);
+            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postWorkExperience.php", workExperiences);
+            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postEducation.php", education);
+            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postLanguageSkills.php", language);
+            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postDigitalSkills.php", digitalSkill);
+            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postProjects.php", projects);
+            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postHonoursAndAwards.php", honours);
+            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postDrivingLicense.php", license);
             window.location.reload();
             // console.log("Success:", { headerResponse, workExperienceResponse, educationResponse, languageResponse, digitalSkillResponse, projectsResponse, honoursResponse, licenseResponse });
         } catch (error) {
@@ -135,7 +262,8 @@ function AddResumee() {
                                 key={index} 
                                 index={index} 
                                 experience={experience} 
-                                handleExperienceChange={handleExperienceChange} 
+                                handleExperienceChange={handleExperienceChange}
+                                handleDeleteExperience={handleDeleteExperience}
                             />
                         ))}
                         <button onClick={addWorkExperience} className="add-button">Add Work Experience</button>
@@ -147,6 +275,7 @@ function AddResumee() {
                                 index={index}
                                 education={education}
                                 handleEducationChange={handleEducationChange}
+                                handleDeleteEducation={handleDeleteEducation}
                             />
                         ))}
                         <button onClick={addEducation} className="add-button">Add Education</button>
@@ -158,6 +287,7 @@ function AddResumee() {
                                 index={index}
                                 language={language}
                                 handleLanguageChange={handleLanguageChange}
+                                handleDeleteLanguage={handleDeleteLanguage}
                             />
                         ))}
                         <button onClick={addLanguage} className="add-button">Add Language</button>
@@ -169,6 +299,7 @@ function AddResumee() {
                                 index={index}
                                 digitalSkill={digitalSkill}
                                 handleDigitalSkillChange={handleDigitalSkillChange}
+                                handleDeleteDigitalSkill={handleDeleteDigitalSkill}
                             />
                         ))}
                         <button onClick={addDigitalSkill} className="add-button">Add Digital Skill</button>
@@ -180,6 +311,7 @@ function AddResumee() {
                                 index={index}
                                 projects={projects}
                                 handleProjectsChange={handleProjectsChange}
+                                handleDeleteProject={handleDeleteProject}
                             />
                         ))}
                         <button onClick={addProjects} className="add-button">Add Project</button>
@@ -191,6 +323,7 @@ function AddResumee() {
                                 index={index}
                                 honours={honours}
                                 handleHonoursChange={handleHonoursChange}
+                                handleDeleteHonour={handleDeleteHonour}
                             />
                         ))}
                         <button onClick={addHonours} className="add-button">Add Honours and Awards</button>
@@ -202,6 +335,7 @@ function AddResumee() {
                                 index={index}
                                 license={license}
                                 handleLicenseChange={handleLicenseChange}
+                                handleDeleteLicense={handleDeleteLicense}
                             />
                         ))}
                         <button onClick={addLicense} className="add-button">Add Driving License</button>

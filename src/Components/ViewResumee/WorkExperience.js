@@ -9,17 +9,17 @@ function WorkExperience({job}) {
                 <h3 className="position">
                     {job.position}{" "}
                     <span className="date">
-                    [ {job.date_from} {job.date_to ? `- ${job.date_to}` : ""} ]
+                    [ {job.date_from} {job.date_to > job.date_from ? `- ${job.date_to}` : "- Present"} ]
                     </span>
                 </h3>
 
                 <h3 className="company">{job.company}</h3>
                 <p className="location">
-                    <span className="city-country">City:</span> {job.city} |
-                    <span className="city-country"> Country:</span> {job.country}
+                    {job.city && <span className="city-country">City:</span>} {job.city} {job.city && `| `}
+                    {job.country && <span className="city-country"> Country:</span>} {job.country}
                 </p>
                 <p>{job.description}</p>
-                <h4 className="technologies-title">Technologies</h4>
+                {job.technologies && <h4 className="technologies-title">Technologies</h4>}
                 <ul className="technologies">
                     {job.technologies.split(',').map((tech, index) => (
                     <li key={index}>{tech}</li>

@@ -6,18 +6,14 @@ function EducationAndTraining({ edu }) {
       <h3 className="edu-title">
         {edu.title}{" "}
         <span className="date">
-          [{" "}
-          {edu.date_to === edu.date_from || edu.date_to === ""
-            ? `${edu.date_from}`
-            : `${edu.date_to} - ${edu.date_from}`}{" "}
-          ]
+          [{edu.date_from} {edu.date_to > edu.date_from ? `- ${edu.date_to}` : ""}]
         </span>
       </h3>
       <h3 className="edu-school">{edu.school_or_trainer}</h3>
       <p className="edu-location">
         {edu.city && (
           <>
-            <span className="edu-city-country">City:</span> {edu.city} |
+             {edu.city} |
           </>
         )}
         {edu.country && (

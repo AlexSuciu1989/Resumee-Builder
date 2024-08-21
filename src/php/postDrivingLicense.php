@@ -28,10 +28,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $vehicle_type = $jsonData['vehicle_type'];
         $license = $jsonData['license'];
 
-        if ($id) {
+        if ($id && $license) {
             $sql = "UPDATE `cv-driving-license` SET `user` = ?, `vehicle_type` = ?, `license` = ? WHERE `id` = ? "; 
             $stmt = mysqli_prepare($conn, $sql);
             mysqli_stmt_bind_param($stmt, "ssss", $user, $vehicle_type, $license, $id);
+        } elseif ($id && ($license === null || $license === "")) {
+            // Delete record
+            $sql = "DELETE FROM `cv-driving-license` WHERE `id` = ?";
+            $stmt = mysqli_prepare($conn, $sql);
+            mysqli_stmt_bind_param($stmt, "s", $id);
         } else {
             $sql = "INSERT INTO `cv-driving-license` (`user`, `vehicle_type`, `license`) 
             VALUES (?, ?, ?)";

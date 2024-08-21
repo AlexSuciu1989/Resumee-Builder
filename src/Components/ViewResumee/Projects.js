@@ -8,11 +8,7 @@ function Projects({ project }) {
       <h3 className="projects-title">
         {project.title}{" "}
         <span className="date">
-          [{" "}
-          {project.date_to === project.date_from || project.date_to === ""
-            ? `${project.date_from}`
-            : `${project.date_to} - ${project.date_from}`}{" "}
-          ]
+          [{project.date_from}{project.date_to > project.date_from ? `- ${project.date_from}` : ""}]
         </span>
       </h3>
       <p>{project.description}</p>

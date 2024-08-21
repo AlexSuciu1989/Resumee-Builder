@@ -17,11 +17,11 @@ if (isset($_GET['user'])) {
 
     // Prepare and execute queries
     $sql1 = "SELECT * FROM `cv-header` WHERE user = ?";
-    $sql2 = "SELECT * FROM `cv-work-experience` WHERE user = ?";
-    $sql3 = "SELECT * FROM `cv-projects` WHERE user = ?";
+    $sql2 = "SELECT * FROM `cv-work-experience` WHERE user = ? ORDER BY date_from DESC";
+    $sql3 = "SELECT * FROM `cv-projects` WHERE user = ? ORDER BY date_from DESC";
     $sql4 = "SELECT * FROM `cv-language-skills` WHERE user = ?";
-    $sql5 = "SELECT * FROM `cv-honours-and-awards` WHERE user = ?";
-    $sql6 = "SELECT * FROM `cv-education-and-training` WHERE user = ?";
+    $sql5 = "SELECT * FROM `cv-honours-and-awards` WHERE user = ? ORDER BY `date` DESC";
+    $sql6 = "SELECT * FROM `cv-education-and-training` WHERE user = ? ORDER BY date_from DESC";
     $sql7 = "SELECT * FROM `cv-driving-license` WHERE user = ?";
     $sql8 = "SELECT * FROM `cv-digital-skills` WHERE user = ?";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import './AddEducation.css'
 
-function AddEducation({ index, education, handleEducationChange }) {
+function AddEducation({ index, education, handleEducationChange, handleDeleteEducation }) {
     const handleChange = (e) => {
         const { id, value } = e.target;
         handleEducationChange(index, id, value);
@@ -9,6 +9,7 @@ function AddEducation({ index, education, handleEducationChange }) {
 
     return (
         <div className="AddEducation">
+            <button onClick={() => handleDeleteEducation(index, education.id)} className="delete-button">Delete</button>
             <div className="AddEducation-subcontainer">
                 <label>Title</label>
                 <input type="text" className="AddEducation-input" placeholder="Title" id="title" value={education.title} onChange={handleChange} />
@@ -16,11 +17,11 @@ function AddEducation({ index, education, handleEducationChange }) {
             <div className="AddEducation-container">
                 <div className="AddEducation-subcontainer">
                     <label>Starting Date</label>
-                    <input type="date" className="AddEducation-input" id="date_from" value={education.date_from} onChange={handleChange} />
+                    <input type="date" className="AddEducation-input" id="date_from" value={education.date_from === "0000-00-00" ? education.date_to = "" : education.date_to} onChange={handleChange} />
                 </div>
                 <div className="AddEducation-subcontainer">
                     <label>Ending Date</label>
-                    <input type="date" className="AddEducation-input" id="date_to" value={education.date_to} onChange={handleChange} />
+                    <input type="date" className="AddEducation-input" id="date_to" value={education.date_to === "0000-00-00" ? education.date_to = "" : education.date_to} onChange={handleChange} />
                 </div>
             </div>
             <div className="AddEducation-subcontainer">

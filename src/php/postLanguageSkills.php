@@ -36,11 +36,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $technologies = $jsonData['technologies'];
 
         // Prepare the SQL statement
-        if ($id) {
+        if ($id && $language) {
             $sql = "UPDATE `cv-language-skills` SET `user` = ?, `language_type` = ?, `language` = ?, `listening` = ?, `reading` = ?, `writing` = ?, `spoken_production` = ?, `spoken_interaction` = ? WHERE `id` = ? ";
             $stmt = mysqli_prepare($conn, $sql);
             mysqli_stmt_bind_param($stmt, "sssssssss", $user, $language_type, $language, $listening, $reading, $writing, $spoken_production, $spoken_interaction, $id);
-
+        } elseif ($id && ($language === null || $language === "")) {
+            // Delete record
+            $sql = "DELETE FROM `cv-language-skills` WHERE `id` = ?";
+            $stmt = mysqli_prepare($conn, $sql);
+            mysqli_stmt_bind_param($stmt, "s", $id);
         } else {
             $sql = "INSERT INTO `cv-language-skills` (`user`, `language_type`, `language`, `listening`, `reading`, `writing`, `spoken_production`, `spoken_interaction`) 
             VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
