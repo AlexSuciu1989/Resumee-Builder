@@ -3,7 +3,7 @@ import { DataContext } from "./DataContex"
 // import './Header.css'
 
 import mail from "./ico/envelope-solid.svg";
-import home from "./ico/location-white.svg";
+import home from "./ico/location-dot-solid.svg";
 import phone from "./ico/phone-solid.svg";
 import website from "./ico/globe-solid.svg";
 import whatsapp from "./ico/whatsapp-brands-solid.svg";

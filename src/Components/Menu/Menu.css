@@ -33,3 +33,11 @@
     display: flex;
     justify-content: center;
 }
+
+@media only screen and (max-width: 710px) {
+    .Menu-button-contaier {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}

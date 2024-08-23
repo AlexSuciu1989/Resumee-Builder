@@ -147,7 +147,6 @@
         margin: initial;
         justify-content: center;
         align-items: center;
-
     }
     .resumee-ico {
         width: 50px;
@@ -161,7 +160,22 @@
     .resumee {
         margin-left: 0px;
         margin-right: 0px;
-        min-width: 90%;
+        min-width: 99%;
     }
 
+}
+
+@media print {
+    .resumee-container {
+        min-width: 99%;
+    }
+    .resumee {
+        min-width: 99%;
+    }
+    .ViewResumee-subcontainer {
+        min-width: 99%;
+    }
+    .ViewResumee {
+        min-width: 99%;
+    }
 }
