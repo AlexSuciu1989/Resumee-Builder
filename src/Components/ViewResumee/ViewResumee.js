@@ -39,11 +39,11 @@ function ViewResumee() {
         <div className={`ViewResumee ${template}`}>
           <div className="ViewResumee-colors-print">
             <div className="ViewResumee-cv-colors">
-              <button className="purple-button" onClick={() => handleTemplateChange("purple")}></button>
-              <button className="orange-button" onClick={() => handleTemplateChange("orange")}></button>
-              <button className="gray-button" onClick={() => handleTemplateChange("gray")}></button>
-              <button className="green-button" onClick={() => handleTemplateChange("green")}></button>
-              <button className="blue-button" onClick={() => handleTemplateChange("blue")}></button>
+              <button className="purple-button" onClick={() => handleTemplateChange("purple")} title="Purple Template Button"></button>
+              <button className="orange-button" onClick={() => handleTemplateChange("orange")} title="Orange Template Button"></button>
+              <button className="gray-button" onClick={() => handleTemplateChange("gray")} title="Gray Template Button"></button>
+              <button className="green-button" onClick={() => handleTemplateChange("green")} title="Green Template Button"></button>
+              <button className="blue-button" onClick={() => handleTemplateChange("blue")} title="Blue Template Button"></button>
             </div>
             <div className="ViewResumee-print">
               <img src={pdfImg} onClick={() => handlePrint()} alt="Download as PDF" className="pdf-icon"></img>

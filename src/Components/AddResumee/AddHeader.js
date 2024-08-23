@@ -12,39 +12,39 @@ function AddHeader({ header, handleHeaderChange }) {
         <div className="AddHeader">
             <div className="AddHeader-container">
                 <div className="AddHeader-subcontainer name-container">
-                    <label>Complete Name</label>
+                    <label htmlFor="name">Complete Name</label>
                     <input type="text" className="AddHeader-input" placeholder="Complete Name" id="name" value={header.name} onChange={handleChange}></input>
                 </div>
                 <div className="AddHeader-subcontainer">
-                    <label>Complete Adress</label>
+                    <label htmlFor="home">Complete Adress</label>
                     <input type="text" className="AddHeader-input" placeholder="Complete Address" id="home" value={header.home} onChange={handleChange}></input>
                 </div>
             </div>
             <div className="AddHeader-container">
                 <div className="AddHeader-subcontainer">
-                    <label>Email Adress</label>
+                    <label htmlFor="email">Email Adress</label>
                     <input type="text" className="AddHeader-input" placeholder="Email Address" id="email" value={header.email} onChange={handleChange}></input>
                 </div>
                 <div className="AddHeader-subcontainer">
-                    <label>Phone Number</label>
+                    <label htmlFor="phone">Phone Number</label>
                     <input type="text" className="AddHeader-input" placeholder="Phone Number" id="phone" value={header.phone} onChange={handleChange}></input>
                 </div>
                 <div className="AddHeader-subcontainer">
-                    <label>Website</label>
+                    <label htmlFor="website">Website</label>
                     <input type="text" className="AddHeader-input" placeholder="Website" id="website" value={header.website} onChange={handleChange}></input>
                 </div>
                 <div className="AddHeader-subcontainer">
-                    <label>WhatsApp</label>
+                    <label htmlFor="whatsapp">WhatsApp</label>
                     <input type="text" className="AddHeader-input" placeholder="WhatsApp Number" id="whatsapp" value={header.whatsapp} onChange={handleChange}></input>
                 </div>
                 <div className="AddHeader-subcontainer">
-                    <label>Linkedin</label>
+                    <label htmlFor="linkedin">Linkedin</label>
                     <input type="text" className="AddHeader-input" placeholder="LinkedIn" id="linkedin" value={header.linkedin} onChange={handleChange}></input>
                 </div>
             </div>
             <div className="AddHeader-container">
                 <div className="AddHeader-subcontainer">
-                    <label>Gender</label>
+                    <label htmlFor="gender">Gender</label>
                     <select id="gender" className="AddHeader-input" value={header.gender} onChange={handleChange}>
                         <option value=""></option>
                         <option value="Male">Male</option>
@@ -53,16 +53,16 @@ function AddHeader({ header, handleHeaderChange }) {
                     </select>
                 </div>
                 <div className="AddHeader-subcontainer">
-                    <label>Date of birth</label>
+                    <label htmlFor="date_of_birth">Date of birth</label>
                     <input type="date" className="AddHeader-input" id="date_of_birth" value={header.date_of_birth} onChange={handleChange}></input>
                 </div>
                 <div className="AddHeader-subcontainer">
-                    <label>Nationality</label>
+                    <label htmlFor="nationality">Nationality</label>
                     <input type="text" className="AddHeader-input" placeholder="Nationality" id="nationality" value={header.nationality} onChange={handleChange}></input>
                 </div>
             </div>
             <div className="AddHeader-subcontainer">
-                <label>About Me</label>
+                <label htmlFor="about_me">About Me</label>
                 <textarea className="AddHeader-input" placeholder="About me" id="about_me" value={header.about_me} onChange={handleChange}></textarea>
             </div>
         </div>

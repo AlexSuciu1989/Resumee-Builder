@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-import "./Register.css"
+import "./Register.css";
+import TermsAndConditions from "../Policy/TermsAndConditions";
 
 function Register() {
     const [formData, setFormData] = useState({
@@ -12,7 +13,9 @@ function Register() {
     });
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
-    const [passwordMatch, setPasswordMatch] = useState(true); // State to track password match
+    const [passwordMatch, setPasswordMatch] = useState(true);
+    const [termsConditions, setTermsConditions] = useState(false);
+    const [termsVisible, setTermsVisible] = useState(false);
 
     // Handle form field changes
     const handleChange = (e) => {
@@ -25,10 +28,20 @@ function Register() {
         }
     };
 
+    // Toggle visibility of Terms and Conditions
+    const handleTermsVisibility = () => {
+        setTermsVisible(!termsVisible);
+    };
+
+    // Handle checkbox for Terms and Conditions
+    const handleTermsChange = () => {
+        setTermsConditions(!termsConditions);
+    };
+
     // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
+
         // Final check before submission
         if (formData.password !== formData.confirmPassword) {
             setError("Passwords do not match.");
@@ -61,7 +74,7 @@ function Register() {
         <div>
             <form onSubmit={handleSubmit} className="register-subcontainer">
                 <div>
-                    <label>Username</label>
+                    <label htmlFor="register-account">Username</label>
                     <input
                         type="text"
                         id="register-account"
@@ -72,7 +85,7 @@ function Register() {
                     />
                 </div>
                 <div>
-                    <label>E-mail Address</label>
+                    <label htmlFor="register-email">E-mail Address</label>
                     <input
                         type="email"
                         id="register-email"
@@ -83,7 +96,7 @@ function Register() {
                     />
                 </div>
                 <div>
-                    <label>Phone Number</label>
+                    <label htmlFor="register-phone">Phone Number</label>
                     <input
                         type="text"
                         id="register-phone"
@@ -94,7 +107,7 @@ function Register() {
                     />
                 </div>
                 <div>
-                    <label>Password</label>
+                    <label htmlFor="register-password">Password</label>
                     <input
                         type="password"
                         id="register-password"
@@ -106,7 +119,7 @@ function Register() {
                     />
                 </div>
                 <div>
-                    <label>Confirm Password</label>
+                    <label htmlFor="confirm_password">Confirm Password</label>
                     <input
                         type="password"
                         id="confirm_password"
@@ -117,9 +130,25 @@ function Register() {
                         style={{ borderColor: !passwordMatch ? "red" : "" }}  // Conditional styling
                     />
                 </div>
-                {!passwordMatch && <p style={{ color: "red" }}>Passwords do not match.</p>}  {/* Error message */}
+                {!passwordMatch && formData.password && formData.confirmPassword && (
+                    <p style={{ color: "red" }}>Passwords do not match.</p>
+                )}
+                <div>
+                    <label style={{ color: !termsConditions ? "red" : "" }}>
+                        <input
+                            type="checkbox"
+                            onChange={handleTermsChange}
+                            style={{ marginRight: "5px" }}
+                        />
+                        I agree to the <button type="button" className="terms-button" onClick={handleTermsVisibility}>Terms and Conditions</button>
+                    </label>
+                </div>
                 <div className="register-buttons">
-                    <button type="submit" className="register-submit-button" disabled={!passwordMatch}>
+                    <button
+                        type="submit"
+                        className="register-submit-button"
+                        disabled={!passwordMatch || !termsConditions}
+                    >
                         Create new account
                     </button>
                     <button
@@ -133,6 +162,10 @@ function Register() {
             </form>
             {error && <p style={{ color: "red" }}>{error}</p>}
             {success && <p style={{ color: "green" }}>{success}</p>}
+            <div className={`terms-container ${termsVisible ? "visible" : "hidden"}`}>
+                <TermsAndConditions />
+                <button onClick={handleTermsVisibility} className="terms-close-button">Close</button>
+            </div>
         </div>
     );
 }

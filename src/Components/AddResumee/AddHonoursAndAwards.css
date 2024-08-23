@@ -51,8 +51,19 @@
     flex: 1;
 }
 
-
-
 .AddHonours-description{
     min-height: 150px;
 }
+
+@media only screen and (max-width: 890px) {
+    .AddHonours-container {
+       display: block;
+   }
+ }
+
+ @media only screen and (max-width: 730px) {
+    .AddHonours {
+        margin-left: 0;
+        margin-right: 0;
+    }
+  }

@@ -50,3 +50,16 @@
 .AddLanguageSkills-container > * {
     flex: 1;
 }
+
+@media only screen and (max-width: 890px) {
+    .AddLanguageSkills-container {
+       display: block;
+   }
+ }
+
+ @media only screen and (max-width: 730px) {
+    .AddLanguageSkills {
+        margin-left: 0;
+        margin-right: 0;
+    }
+  }

@@ -54,3 +54,16 @@
 .AddEducation-description {
     min-height: 150px;
 }
+
+@media only screen and (max-width: 890px) {
+    .AddEducation-container {
+       display: block;
+   }
+ }
+
+ @media only screen and (max-width: 730px) {
+    .AddEducation {
+        margin-left: 0;
+        margin-right: 0;
+    }
+  }

@@ -3,8 +3,8 @@ import './AddDrivingLicense.css'
 
 function AddDrivingLicense({ index, license, handleLicenseChange, handleDeleteLicense }) {
     const handleChange = (e) => {
-        const { id, value } = e.target;
-        handleLicenseChange(index, id, value);
+        const { name, value } = e.target;
+        handleLicenseChange(index, name, value);
     };
 
     return (
@@ -13,11 +13,11 @@ function AddDrivingLicense({ index, license, handleLicenseChange, handleDeleteLi
             <div className="AddDrivingLicense-container">
                 <div className="AddDrivingLicense-subcontainer">
                     <label>Vehicle Type</label>
-                    <input type="text" className="AddDrivingLicense-input" placeholder="Car, Motorcycle..." id="vehicle_type" value={license.vehicle_type} onChange={handleChange} />
+                    <input type="text" className="AddDrivingLicense-input" placeholder="Car, Motorcycle..." name="vehicle_type" value={license.vehicle_type} onChange={handleChange} />
                 </div>
                 <div className="AddDrivingLicense-subcontainer">
                     <label>License</label>
-                    <input type="text" className="AddDrivingLicense-input" placeholder="AM, A1, B, ..." id="license" value={license.license} onChange={handleChange} />
+                    <input type="text" className="AddDrivingLicense-input" placeholder="AM, A1, B, ..." name="license" value={license.license} onChange={handleChange} />
                 </div>
             </div>
             

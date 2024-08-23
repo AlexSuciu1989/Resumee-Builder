@@ -37,6 +37,7 @@ function AddResumee() {
     const [honours, setHonours] = useState([]);
     const [license, setLicense] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     // Function to handle changes in Header
     const handleHeaderChange = (field, value) => {
@@ -221,6 +222,7 @@ function AddResumee() {
     // Combined submission function
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsSubmitting(true);
         const completeHeader = { ...header, user };
         try {
             await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postHeader.php", completeHeader);
@@ -234,12 +236,19 @@ function AddResumee() {
             window.location.reload();
             // console.log("Success:", { headerResponse, workExperienceResponse, educationResponse, languageResponse, digitalSkillResponse, projectsResponse, honoursResponse, licenseResponse });
         } catch (error) {
-            console.error("Error:", error);
+            console.error("Error:", error);    
+        } finally {
+            setIsSubmitting(false);  // Hide spinner when submission is complete
         }
     };
 
     return (
         <div className="AddResumee">
+            {isSubmitting && (
+                <div className="spinner-overlay">
+                    <div className="spinner"></div>
+                </div>
+            )}
             <div>
                 <h2>UserName</h2>
                 <input type="text" placeholder="username" id="user" value={user} onChange={(e) => setUser(e.target.value)} readOnly/>

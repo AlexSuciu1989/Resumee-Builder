@@ -58,3 +58,10 @@
 #about_me{
     min-height: 150px;
 }
+
+@media only screen and (max-width: 730px) {
+    .AddHeader {
+        margin-left: 0;
+        margin-right: 0;
+    }
+  }

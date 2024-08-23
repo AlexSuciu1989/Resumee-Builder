@@ -31,3 +31,10 @@
     font-weight: 500;
     margin-top: 15px;
 }
+
+@media only screen and (max-width: 730px) {
+    .AddDigitalSkills {
+        margin-left: 0;
+        margin-right: 0;
+    }
+  }

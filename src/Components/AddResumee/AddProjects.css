@@ -54,3 +54,16 @@
 .AddProjects-description {
     min-height: 150px;
 }
+
+@media only screen and (max-width: 890px) {
+    .AddProjects-container {
+       display: block;
+   }
+ }
+
+ @media only screen and (max-width: 730px) {
+    .AddProjects {
+        margin-left: 0;
+        margin-right: 0;
+    }
+  }
