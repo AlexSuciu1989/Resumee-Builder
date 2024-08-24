@@ -46,7 +46,7 @@ function Header () {
                    <img src={linkedin} className="icon" alt="linkedin icon"></img>
                    <span className="titles">LinkedIn:</span> {item.linkedin}
                  </p>
-                 <div>
+                 <div className='header-subcontainer'>
                    <p>
                      <span className="titles">Gender:</span> {item.gender}
                    </p>

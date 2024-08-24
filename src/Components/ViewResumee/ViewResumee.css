@@ -179,3 +179,9 @@
         min-width: 99%;
     }
 }
+
+@media only screen and (max-width: 890px) {
+    .header-subcontainer {
+        flex-direction: column;
+    }
+}

@@ -17,7 +17,7 @@ function AddEducation({ index, education, handleEducationChange, handleDeleteEdu
             <div className="AddEducation-container">
                 <div className="AddEducation-subcontainer">
                     <label>Starting Date</label>
-                    <input type="date" className="AddEducation-input" name="date_from" value={education.date_from === "0000-00-00" ? education.date_to = "" : education.date_to} onChange={handleChange} />
+                    <input type="date" className="AddEducation-input" name="date_from" value={education.date_from === "0000-00-00" ? education.date_from = "" : education.date_from} onChange={handleChange} />
                 </div>
                 <div className="AddEducation-subcontainer">
                     <label>Ending Date</label>
