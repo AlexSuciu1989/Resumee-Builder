@@ -1,8 +1,7 @@
 .DisplayUsername {
-    position: absolute;
+    /* position: absolute;
     top: 0;
-    right: 0;
-    margin-top: -10px;
+    right: 0; */
     margin-right: 10px;
     padding: 0;
     font-style: italic;

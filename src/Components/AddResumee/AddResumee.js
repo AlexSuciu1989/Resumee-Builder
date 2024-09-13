@@ -11,6 +11,7 @@ import AddDrivingLicense from "./AddDrivingLicense";
 import axios from "axios";
 import Cookies from "js-cookie";
 
+
 function AddResumee() {
     const [user, setUser] = useState(Cookies.get('username') || ""); // Initialize user from cookie
     const [header, setHeader] = useState({
@@ -218,6 +219,32 @@ function AddResumee() {
         
         fetchData();
     }, [user]);
+
+    const autoSave = async () => {
+        const completeHeader = { ...header, user };
+        try {
+            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postHeader.php", completeHeader);
+            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postWorkExperience.php", workExperiences);
+            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postEducation.php", education);
+            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postLanguageSkills.php", language);
+            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postDigitalSkills.php", digitalSkill);
+            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postProjects.php", projects);
+            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postHonoursAndAwards.php", honours);
+            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postDrivingLicense.php", license);
+            console.log("Auto-saved successfully!");
+        } catch (error) {
+            console.error("Error during auto-save:", error);
+        }
+    };
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            autoSave();
+        }, 300000); // 5 minutes in milliseconds
+
+        // Clean up the interval when the component unmounts
+        return () => clearInterval(intervalId);
+    }, [header, workExperiences, education, language, digitalSkill, projects, honours, license]);
 
     // Combined submission function
     const handleSubmit = async (e) => {

@@ -22,30 +22,31 @@ function Header () {
                <div className="resumee-header" key={index}>
                <h1 className="name" >{item.name}</h1>
                <div className="header-info">
-                 <p>
+                {item.home ?                  <p>
                    <img src={home} className="icon" alt="home icon" itemType='svg'></img>
                    <span className="titles">Home:</span> {item.home}
-                 </p>
-                 <p>
+                 </p> : ""}
+                 {item.email ?                  <p>
                    <img src={mail} className="icon" alt="mail icon"></img>
                    <span className="titles">Email:</span> {item.email}
-                 </p>
-                 <p>
+                 </p> : ""}
+                 {item.phone ?                  <p>
                    <img src={phone} className="icon" alt="phone icon"></img>
                    <span className="titles">Phone:</span> {item.phone}
-                 </p>
-                 <p>
+                 </p> : ""}
+                 {item.website ?                  <p>
                    <img src={website} className="icon" alt="website icon"></img>
                    <span className="titles">Website:</span> {item.website}
-                 </p>
-                 <p>
+                 </p> : ""}
+                 {item.whatsapp ?                  <p>
                    <img src={whatsapp} className="icon" alt="whatsapp icon"></img>
                    <span className="titles">WhatsApp Messenger:</span> {item.whatsapp}
-                 </p>
+                 </p> : ""}
+                 {item.linkedin ?                  
                  <p>
                    <img src={linkedin} className="icon" alt="linkedin icon"></img>
                    <span className="titles">LinkedIn:</span> {item.linkedin}
-                 </p>
+                 </p> : ""}
                  <div className='header-subcontainer'>
                    <p>
                      <span className="titles">Gender:</span> {item.gender}

@@ -9,7 +9,7 @@ function HonoursAndAwards({ honor }) {
     <div className="honours-and-awards">
       <h3 className="honours-title">
         {honor.title}
-        <span className="date"> [ {honor.date}] </span>
+        <span className="date"> {honor.date === "0000-00-00" || honor.date === "" ? "" : `[${honor.date}]`} </span>
       </h3>
       <h3 className="honours-issuer">{honor.issuer}</h3>
 

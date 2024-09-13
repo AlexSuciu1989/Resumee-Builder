@@ -167,16 +167,16 @@
 
 @media print {
     .resumee-container {
-        min-width: 99%;
+        min-width: 90%;
     }
     .resumee {
-        min-width: 99%;
+        min-width: 90%;
     }
     .ViewResumee-subcontainer {
-        min-width: 99%;
+        min-width: 90%;
     }
     .ViewResumee {
-        min-width: 99%;
+        min-width: 90%;
     }
 }
 
