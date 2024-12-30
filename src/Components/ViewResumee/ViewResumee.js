@@ -15,6 +15,7 @@ import './templates/gray.css';
 import './templates/green.css';
 import './templates/blue.css';
 import './templates/print.css';
+import {resumeFonts} from './templates/fonts';
 
 import React, { useContext, useState } from 'react';
 import { DataContext } from "./DataContex";
