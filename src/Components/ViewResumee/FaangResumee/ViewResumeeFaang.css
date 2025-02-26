@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+.ViewResumeeFaang {
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  font-family: "Noto Serif", sans-serif;
+}
+
+.education-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.education-container > p {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+h5 {
+  border-bottom: 1px solid black;
+  margin-top: 20px;
+}
+
+.objective {
+  text-align: justify;
+  text-indent: 15px;
+}
+
+.edu-title,
+.skill-title {
+  font-weight: bold;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.experience-header p {
+  margin: 0;
+}
+
+.experience-header div:nth-last-child(1) {
+  text-align: right;
+}
+
+.job-position {
+  font-weight: bold;
+}
+
+.date-city-container {
+  font-style: italic;
+}
+
+.job-description {
+  margin-left: 20px;
+  text-align: justify;
+}
+
+.project-title {
+  font-weight: bold;
+}
+
+.project {
+  text-align: justify;
+}
+
+
+@media print {
+
+    .ViewResumeeFaang-subcontainer {
+        min-width: 90%;
+    }
+    .ViewResumeeFaang {
+        min-width: 90%;
+    }
+
+    .ViewResumee-print {
+        display: none;
+    }
+}

@@ -47,3 +47,9 @@
 
 
 }
+
+@media print {
+    .Menu-button-container {
+        display: none;
+    }
+}

@@ -16,3 +16,19 @@
     align-self: flex-start;
 }
 
+@media print {
+    .buy-coffee-container {
+        display: none;
+    }
+    .logout-container {
+        display: none;
+    }
+
+    .logo-container {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        max-width: 20px;
+        opacity: 25%;
+    }
+}

@@ -12,6 +12,12 @@ html {
   html {
     background-color: white;
   }
+  .Footer {
+    display: none;
+  }
+  .Navbar {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 730px) {
