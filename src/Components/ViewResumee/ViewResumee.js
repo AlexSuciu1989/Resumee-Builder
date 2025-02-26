@@ -35,7 +35,11 @@ function ViewResumee() {
     const handlePrint = () => {
       window.print()
     }
-
+    const digitalSkills = data["cv-digital-skills"].filter(skill => skill.skill_type === "Digital Skill");
+    const technicalSkills = data["cv-digital-skills"].filter(skill => skill.skill_type === "Technical Skill");
+    const softSkills = data["cv-digital-skills"].filter(skill => skill.skill_type === "Soft Skill");
+    const otherSkills = data["cv-digital-skills"].filter(skill => (skill.skill_type === "" || skill.skill_type === "Select Skill Type"));
+    
     return (
         <div className={`ViewResumee ${template}`}>
           <div className="ViewResumee-colors-print">
@@ -64,13 +68,49 @@ function ViewResumee() {
               {data["cv-language-skills"]?.map((language, index) => (
                 <LanguageSkills key={index} language={language} />
               ))}
-              {data["cv-digital-skills"]?.length > 0 && <h2 className="sub-title">DIGITAL SKILLS</h2>}
+              {data["cv-digital-skills"]?.length > 0 && <h2 className="sub-title">SKILLS</h2>}
               <div className="digital-skills">
-                <ul>
-                  {data["cv-digital-skills"]?.map((skills, index) => (
-                      <DigitalSkills key={index} skills={skills} />
-                  ))}
-                </ul>
+                {digitalSkills.length > 0 && (
+                  <div>
+                    <h3>Digital Skills</h3>
+                    <ul>
+                      {digitalSkills.map((skills, index) => (
+                        <DigitalSkills key={index} skills={skills} />
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {technicalSkills.length > 0 && (
+                  <div>
+                    <h3>Technical Skills</h3>
+                    <ul>
+                      
+                      {technicalSkills.map((skills, index) => (
+                        <DigitalSkills key={index} skills={skills} />
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {softSkills.length > 0 && (
+                  <div>
+                    <h3>Soft Skills</h3>
+                    <ul>
+                      {softSkills.map((skills, index) => (
+                        <DigitalSkills key={index} skills={skills} />
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {otherSkills.length > 0 && (
+                  <div>
+                    <h3>Other Skills</h3>
+                    <ul>
+                      {otherSkills.map((skills, index) => (
+                        <DigitalSkills key={index} skills={skills} />
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
               {data["cv-projects"]?.length > 0 && <h2 className="sub-title">PROJECTS</h2>}
               {data["cv-projects"]?.map((data, index) => (

@@ -1,6 +1,6 @@
-.AddDigitalSkills {
+.AddTestimonial {
     display: flex;
-    /*flex-direction: column; */
+    flex-direction: column;
     border-radius: 15px;
     margin: 30px 50px;
     padding: 30px;
@@ -8,7 +8,7 @@
     box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.2);
 }
 
-.AddDigitalSkills-input {
+.AddTestimonial-input {
     margin: 10px;
     min-height: 20px;
     padding: 8px;
@@ -17,26 +17,20 @@
     border: 1px solid rgb(238, 107, 82, 0.5);
 }
 
-.AddDigitalSkills-input:focus {
+.AddTestimonial-input:focus {
     border: 2px solid rgb(238, 107, 82);
     outline: none;
 }
 
-.AddDigitalSkills-type {
-    margin: 10px;
-    min-height: 20px;
-    padding: 8px;
-    padding-left: 10px;
-    border-radius: 10px;
-    border: 1px solid rgb(238, 107, 82, 0.5);
+.AddTestimonial textarea {
+    resize: vertical;
 }
 
-.AddDigitalSkills-type:focus {
-    border: 2px solid rgb(238, 107, 82);
-    outline: none;
+.AddTestimonial-subcontainer {
+    display: flex;
+    flex-direction: column;
 }
-
-.AddDigitalSkills label {
+.AddTestimonial-subcontainer label {
     margin-left: 15px;
     color:rgb(238, 107, 82);
     margin-bottom: 0;
@@ -45,8 +39,18 @@
     margin-top: 15px;
 }
 
-@media only screen and (max-width: 730px) {
-    .AddDigitalSkills {
+.AddTestimonial-description {
+    min-height: 150px;
+}
+
+@media only screen and (max-width: 890px) {
+    .AddProjects-container {
+       display: block;
+   }
+ }
+
+ @media only screen and (max-width: 730px) {
+    .AddProjects {
         margin-left: 0;
         margin-right: 0;
     }

@@ -49,7 +49,7 @@ function AddResumee() {
     const addWorkExperience = () => setWorkExperiences([...workExperiences, { id: null, user, position: "", company: "", date_from: "", date_to: "", city: "", country: "", description: "", technologies: "" }]);
     const addEducation = () => setEducation([...education, { id: null, user, title: "", date_from: "", date_to: "", school_or_trainer: "", city: "", country: "", website: "", description: "" }]);
     const addLanguage = () => setLanguage([...language, { id: null, user, language_type: "", language: "", listening: "", reading: "", writing: "", spoken_production: "", spoken_interaction: "" }]);
-    const addDigitalSkill = () => setDigitalSkill([...digitalSkill, { id: null, user, skill: "" }]);
+    const addDigitalSkill = () => setDigitalSkill([...digitalSkill, { id: null, user, skill: "", skill_type: "" }]);
     const addProjects = () => setProjects([...projects, { id: null, user, title: "", date_from: "", date_to: "", description: "" }]);
     const addHonours = () => setHonours([...honours, { id: null, user, title: "", issuer: "", date: "", description: "" }]);
     const addLicense = () => setLicense([...license, { id: null, user, vehicle_type: "", license: "" }]);
@@ -128,6 +128,7 @@ function AddResumee() {
                 await axios.post('https://alex-suciu.homebuddy.ro/resumee-builder/php/postDigitalSkills.php', [{
                     id: id,
                     digitalSkill: ""  // Set position to an empty string to trigger deletion
+
                     
                 }]);
             } catch (error) {
@@ -328,7 +329,7 @@ function AddResumee() {
                         ))}
                         <button onClick={addLanguage} className="add-button">Add Language</button>
 
-                        <h2>Digital Skills</h2>
+                        <h2>Skills</h2>
                         {digitalSkill.map((digitalSkill, index) =>(
                             <AddDigitalSkills
                                 key={index}
