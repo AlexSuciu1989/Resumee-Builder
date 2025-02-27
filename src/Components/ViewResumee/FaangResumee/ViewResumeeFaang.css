@@ -78,18 +78,24 @@ h5 {
 .project {
   text-align: justify;
 }
+.ViewResumee-print {
+  display: flex;
+  justify-content: flex-end;
+}
 
-
+.pdf-icon {
+  filter: brightness(0) saturate(100%) invert(69%) sepia(0%) saturate(654%)
+    hue-rotate(333deg) brightness(104%) contrast(85%);
+}
 @media print {
+  .ViewResumeeFaang-subcontainer {
+    min-width: 90%;
+  }
+  .ViewResumeeFaang {
+    min-width: 90%;
+  }
 
-    .ViewResumeeFaang-subcontainer {
-        min-width: 90%;
-    }
-    .ViewResumeeFaang {
-        min-width: 90%;
-    }
-
-    .ViewResumee-print {
-        display: none;
-    }
+  .ViewResumee-print {
+    display: none;
+  }
 }

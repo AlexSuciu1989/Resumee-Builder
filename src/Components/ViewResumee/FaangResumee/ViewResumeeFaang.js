@@ -2,21 +2,40 @@ import React, { useContext } from "react";
 import { DataContext } from "../DataContex";
 import DataProvider from "../DataContex";
 import "./ViewResumeeFaang.css";
-import pdfImg from '../../../Resources/file-pdf-solid.svg'
+import pdfImg from "../../../Resources/file-pdf-solid.svg";
 
 function ViewResumeeFaang() {
   const { data, loading, error } = useContext(DataContext);
   const handlePrint = () => {
-    window.print()
-  }
+    window.print();
+  };
+
+  const digitalSkills = data["cv-digital-skills"].filter(
+    (skill) => skill.skill_type === "Digital Skill"
+  );
+  const technicalSkills = data["cv-digital-skills"].filter(
+    (skill) => skill.skill_type === "Technical Skill"
+  );
+  const softSkills = data["cv-digital-skills"].filter(
+    (skill) => skill.skill_type === "Soft Skill"
+  );
+  const otherSkills = data["cv-digital-skills"].filter(
+    (skill) =>
+      skill.skill_type === "" || skill.skill_type === "Select Skill Type"
+  );
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
   return (
     <div className="ViewResumeeFaang">
-                  <div className="ViewResumee-print">
-              <img src={pdfImg} onClick={() => handlePrint()} alt="Download as PDF" className="pdf-icon"></img>
-            </div>
+      <div className="ViewResumee-print">
+        <img
+          src={pdfImg}
+          onClick={() => handlePrint()}
+          alt="Download as PDF"
+          className="pdf-icon"
+        ></img>
+      </div>
       {data["cv-header"].map((item, index) => (
         <div className="resumee-header" key={index}>
           <h1 className="name">{item.name}</h1>
@@ -56,14 +75,56 @@ function ViewResumeeFaang() {
       <div>
         <h5>SKILLS</h5>
         <p>
-          <span className="skill-title">Digital Skills:</span>
-          {data["cv-digital-skills"]?.map((skills, index) => (
-            <span key={index}>
-              {" "}
-              {skills.skill}
-              {index === data["cv-digital-skills"].length - 1 ? "." : ","}
-            </span>
-          ))}
+          <span className="skill-title">Digital Skills: </span>
+          {digitalSkills.length > 0 && (
+            <>
+              {digitalSkills.map((skills, index) => (
+                <span key={index}>
+                  {skills.skill}
+                  {index === digitalSkills.length - 1 ? "." : ", "}
+                </span>
+              ))}
+            </>
+          )}
+        </p>
+        <p>
+          <span className="skill-title">Technical Skills: </span>
+          {technicalSkills.length > 0 && (
+            <>
+              {technicalSkills.map((skills, index) => (
+                <span key={index}>
+                  {skills.skill}
+                  {index === technicalSkills.length - 1 ? "." : ", "}
+                </span>
+              ))}
+            </>
+          )}
+        </p>
+        <p>
+          <span className="skill-title">Soft Skills: </span>
+          {softSkills.length > 0 && (
+            <>
+              {softSkills.map((skills, index) => (
+                <span key={index}>
+                  {skills.skill}
+                  {index === softSkills.length - 1 ? "." : ", "}
+                </span>
+              ))}
+            </>
+          )}
+        </p>
+        <p>
+          <span className="skill-title">Other Skills: </span>
+          {otherSkills.length > 0 && (
+            <>
+              {otherSkills.map((skills, index) => (
+                <span key={index}>
+                  {skills.skill}
+                  {index === otherSkills.length - 1 ? "." : ", "}
+                </span>
+              ))}
+            </>
+          )}
         </p>
         <p>
           <span className="skill-title">Language Skills:</span>
