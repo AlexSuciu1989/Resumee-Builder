@@ -92,7 +92,16 @@ h5 {
     min-width: 90%;
   }
   .ViewResumeeFaang {
-    min-width: 90%;
+    min-width: 96%;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 80%;
+  }
+
+  .ViewResumeeFaang > div > div {
+    padding-bottom: 3mm;
   }
 
   .ViewResumee-print {

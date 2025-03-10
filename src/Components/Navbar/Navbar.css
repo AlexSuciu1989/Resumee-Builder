@@ -1,34 +1,35 @@
-.LogoImg{
-    max-width: 100px;
-    margin: 5px;
-  }
-.Navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.LogoImg {
+  max-width: 100px;
+  margin: 5px;
+}
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.buy-coffee-container{
-    justify-self: flex-end;
+.buy-coffee-container {
+  justify-self: flex-end;
 }
 
 .logout-container {
-    align-self: flex-start;
+  align-self: flex-start;
 }
 
 @media print {
-    .buy-coffee-container {
-        display: none;
-    }
-    .logout-container {
-        display: none;
-    }
+  .buy-coffee-container {
+    display: none;
+  }
+  .logout-container {
+    display: none;
+  }
 
-    .logo-container {
-        position: absolute;
-        top: 5px;
-        left: 5px;
-        max-width: 20px;
-        opacity: 25%;
-    }
+  .logo-container {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    max-width: 20px;
+    opacity: 25%;
+    z-index: 2;
+  }
 }

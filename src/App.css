@@ -3,7 +3,6 @@ html {
 }
 
 .Menu-container {
-
   margin: 30px;
   width: 95%;
 }
@@ -12,6 +11,7 @@ html {
   html {
     background-color: white;
   }
+
   .Footer {
     display: none;
   }
