@@ -10,16 +10,16 @@ function ViewResumeeFaang() {
     window.print();
   };
 
-  const digitalSkills = data["cv-digital-skills"].filter(
+  const digitalSkills = (data?.["cv-digital-skills"] || []).filter(
     (skill) => skill.skill_type === "Digital Skill"
   );
-  const technicalSkills = data["cv-digital-skills"].filter(
+  const technicalSkills = (data?.["cv-digital-skills"] || []).filter(
     (skill) => skill.skill_type === "Technical Skill"
   );
-  const softSkills = data["cv-digital-skills"].filter(
+  const softSkills = (data?.["cv-digital-skills"] || []).filter(
     (skill) => skill.skill_type === "Soft Skill"
   );
-  const otherSkills = data["cv-digital-skills"].filter(
+  const otherSkills = (data?.["cv-digital-skills"] || []).filter(
     (skill) =>
       skill.skill_type === "" || skill.skill_type === "Select Skill Type"
   );
