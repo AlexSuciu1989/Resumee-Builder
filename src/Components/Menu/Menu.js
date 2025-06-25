@@ -4,6 +4,7 @@ import WrappedViewResumee from "../ViewResumee/ViewResumee";
 import MyApplications from "../MyApplications/MyApplications";
 import Testimonials from "../Testimonials/Testimonials";
 import WrappedViewResumeeFaang from "../ViewResumee/FaangResumee/ViewResumeeFaang";
+import WrappedPremiumResume from "../ViewResumee/PremiumResume/PremiumResume";
 import './Menu.css'
 
 function Menu() {
@@ -12,6 +13,8 @@ function Menu() {
     const [popupVisibleFaang, setPopupVisibleFaang] = useState('hidden');
     const [popupVisibleApplications, setPopupVisibleApplications] = useState('hidden');
     const [popupVisibleTestimonials, setPopupVisibleTestimonials] = useState('hidden');
+    const [secondaryMenuVisible, setSecondaryMenuVisible] = useState('hidden');
+    const [premiumResumeVisible, setPremiumResumeVisible] = useState('hidden');
 
     const handleClick = () => {
         setPopupVisible(popupVisible === 'hidden' ? 'visible' : 'hidden');
@@ -19,6 +22,8 @@ function Menu() {
         setPopupVisibleApplications('hidden');
         setPopupVisibleTestimonials('hidden');
         setPopupVisibleFaang('hidden');
+        setSecondaryMenuVisible('hidden');
+        setPremiumResumeVisible('hidden');
     };
 
     const handleViewClick = () => {
@@ -27,6 +32,7 @@ function Menu() {
         setPopupVisibleApplications('hidden');
         setPopupVisibleTestimonials('hidden');
         setPopupVisibleFaang('hidden');
+        setPremiumResumeVisible('hidden');
     };
 
     const handleFaangClick = () => {
@@ -35,6 +41,7 @@ function Menu() {
         setPopupVisibleApplications('hidden');
         setPopupVisibleTestimonials('hidden');
         setPopupVisibleView('hidden');
+        setPremiumResumeVisible('hidden');
     };
 
     const handleApplicationsClick = () => {
@@ -43,6 +50,8 @@ function Menu() {
         setPopupVisibleView('hidden');
         setPopupVisibleTestimonials('hidden');
         setPopupVisibleFaang('hidden');
+        setSecondaryMenuVisible('hidden');
+        setPremiumResumeVisible('hidden');
     };
 
     const handleTestimonialsClick = () => {
@@ -51,16 +60,39 @@ function Menu() {
         setPopupVisible('hidden');
         setPopupVisibleView('hidden');
         setPopupVisibleFaang('hidden');
+        setSecondaryMenuVisible('hidden');
+        setPremiumResumeVisible('hidden');
     }
+
+    const handleSecondaryMenuClick = () => {
+        setSecondaryMenuVisible(secondaryMenuVisible === 'hidden' ? 'visible' : 'hidden');
+    };
+
+    const handlePremiumResumeClick = () => {
+        setPremiumResumeVisible(premiumResumeVisible === 'hidden' ? 'visible' : 'hidden');
+        setPopupVisible('hidden');
+        setPopupVisibleView('hidden');
+        setPopupVisibleApplications('hidden');
+        setPopupVisibleTestimonials('hidden');
+        setPopupVisibleFaang('hidden');
+    }
+
 
     return (
         <div className="Menu">
             <div className="Menu-button-container">
-                <button onClick={handleClick} className="Menu-button">Create or Edit your Resumee</button>
-                <button onClick={handleViewClick} className="Menu-button">View your Resumee - STANDARD format</button>
-                <button onClick={handleFaangClick} className="Menu-button">View your Resumee - FAANG format</button>
-                <button onClick={handleApplicationsClick} className="Menu-button">Manage your Applications</button>
-                <button onClick={handleTestimonialsClick} className="Menu-button">Manage Testimonials</button>
+                <div className="Menu-main-buttons">
+                    <button onClick={handleClick} className="Menu-button">Create or Edit your Resumee</button>
+                    <button onClick={handleSecondaryMenuClick} className="Menu-button">View and download your Resume</button>
+                    <button onClick={handleApplicationsClick} className="Menu-button">Manage your Applications</button>
+                    <button onClick={handleTestimonialsClick} className="Menu-button">Manage Testimonials</button>
+                </div>
+                <div className={`Menu-secondary-buttons ${secondaryMenuVisible}`}>
+                    <button onClick={handleViewClick} className="Menu-button">STANDARD</button>
+                    <button onClick={handleFaangClick} className="Menu-button">FAANG</button>
+                    <button onClick={handlePremiumResumeClick} className="Menu-button">PREMIUM</button>      
+
+                </div>
             </div>
 
             <div className={`create-cv-container ${popupVisible}`}>
@@ -73,6 +105,10 @@ function Menu() {
 
             <div className={`view-cv-container ${popupVisibleFaang}`}>
                 <WrappedViewResumeeFaang />
+            </div>
+
+            <div className={`view-cv-container ${premiumResumeVisible}`}>
+                <WrappedPremiumResume />
             </div>
 
             <div className={`view-cv-container ${popupVisibleApplications}`}>

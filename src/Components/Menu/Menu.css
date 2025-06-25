@@ -29,7 +29,7 @@
     color: rgb(238, 107, 82);
 }
 
-.Menu-button-container {
+.Menu-main-buttons {
     display: flex;
     justify-content: center;
 }

@@ -1,0 +1,86 @@
+.PremiumResume {
+  font-family: 'Helvetica Neue', sans-serif;
+  max-width: 960px;
+  margin: auto;
+  padding: 60px;
+  background-color: #fcfcfc;
+  color: #2d2d2d;
+  line-height: 1.6;
+}
+
+.PremiumResume header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.PremiumResume header h1 {
+  font-size: 2.6em;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.PremiumResume .sub {
+  font-size: 0.95em;
+  color: #6c6c6c;
+}
+
+.PremiumResume .objective {
+  margin-top: 20px;
+  font-size: 1em;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.PremiumResume h2 {
+  border-bottom: 2px solid #e4e4e4;
+  padding-bottom: 4px;
+  margin-top: 50px;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  color: #444;
+}
+
+.PremiumResume .item {
+  margin-top: 25px;
+}
+
+.PremiumResume .item-header h3 {
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.PremiumResume .item-header span {
+  font-size: 0.95em;
+  color: #555;
+}
+
+.PremiumResume .item-header time {
+  float: right;
+  font-size: 0.9em;
+  color: #888;
+}
+
+.PremiumResume a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+.PremiumResume a:hover {
+  text-decoration: underline;
+}
+
+@media print {
+  .PremiumResume {
+    color: black;
+    padding: 30px;
+    background: white;
+  }
+
+  .PremiumResume a {
+    color: black;
+    text-decoration: none;
+  }
+}
