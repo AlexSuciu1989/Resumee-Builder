@@ -21,7 +21,7 @@ function Footer () {
     return (
         <div className="Footer">
             <div>
-                <p><a href="https://alex-suciu.homebuddy.ro/" target="_blank" rel="noopener noreferrer">About Me</a></p>
+                <p><a href="https://alex-suciu.ro/" target="_blank" rel="noopener noreferrer">About Me</a></p>
                 <p onClick={handleContactVisibility}>Contact</p>
                 <p onClick={handleTermsVisibility}>Terms, Conditions and Cookies policy</p>
 

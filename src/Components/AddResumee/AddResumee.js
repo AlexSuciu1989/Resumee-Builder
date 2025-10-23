@@ -71,7 +71,7 @@ function AddResumee() {
     
         if (id) {
             try {
-                await axios.post('https://alex-suciu.homebuddy.ro/resumee-builder/php/postWorkExperience.php', [{
+                await axios.post('https://alexsuciu.ro/projects/jobrunner/php/postWorkExperience.php', [{
                     id: id,
                     position: ""  // Set position to an empty string to trigger deletion
                     
@@ -89,7 +89,7 @@ function AddResumee() {
     
         if (id) {
             try {
-                await axios.post('https://alex-suciu.homebuddy.ro/resumee-builder/php/postEducation.php', [{
+                await axios.post('https://alexsuciu.ro/projects/jobrunner/php/postEducation.php', [{
                     id: id,
                     title: ""  // Set position to an empty string to trigger deletion
                     
@@ -107,7 +107,7 @@ function AddResumee() {
     
         if (id) {
             try {
-                await axios.post('https://alex-suciu.homebuddy.ro/resumee-builder/php/postLanguageSkills.php', [{
+                await axios.post('https://alexsuciu.ro/projects/jobrunner/php/postLanguageSkills.php', [{
                     id: id,
                     language: ""  // Set position to an empty string to trigger deletion
                     
@@ -125,7 +125,7 @@ function AddResumee() {
     
         if (id) {
             try {
-                await axios.post('https://alex-suciu.homebuddy.ro/resumee-builder/php/postDigitalSkills.php', [{
+                await axios.post('https://alexsuciu.ro/projects/jobrunner/php/postDigitalSkills.php', [{
                     id: id,
                     digitalSkill: ""  // Set position to an empty string to trigger deletion
 
@@ -144,7 +144,7 @@ function AddResumee() {
     
         if (id) {
             try {
-                await axios.post('https://alex-suciu.homebuddy.ro/resumee-builder/php/postProjects.php', [{
+                await axios.post('https://alexsuciu.ro/projects/jobrunner/php/postProjects.php', [{
                     id: id,
                     title: ""  // Set position to an empty string to trigger deletion
                     
@@ -162,7 +162,7 @@ function AddResumee() {
     
         if (id) {
             try {
-                await axios.post('https://alex-suciu.homebuddy.ro/resumee-builder/php/postHonoursAndAwards.php', [{
+                await axios.post('https://alexsuciu.ro/projects/jobrunner/php/postHonoursAndAwards.php', [{
                     id: id,
                     title: ""  // Set position to an empty string to trigger deletion
                     
@@ -180,7 +180,7 @@ function AddResumee() {
     
         if (id) {
             try {
-                await axios.post('https://alex-suciu.homebuddy.ro/resumee-builder/php/postDrivingLicense.php', [{
+                await axios.post('https://alexsuciu.ro/projects/jobrunner/php/postDrivingLicense.php', [{
                     id: id,
                     license: ""  // Set position to an empty string to trigger deletion
                     
@@ -197,7 +197,7 @@ function AddResumee() {
             if (user) {
                 setLoading(true);
                 try {
-                    const response = await axios.get(`https://alex-suciu.homebuddy.ro/resumee-builder/php/fetchData.php?user=${user}`);
+                    const response = await axios.get(`https://alexsuciu.ro/projects/jobrunner/php/fetchData.php?user=${user}`);
                     const data = response.data;
                     console.log(data);
                     if (data) {
@@ -224,14 +224,14 @@ function AddResumee() {
     const autoSave = async () => {
         const completeHeader = { ...header, user };
         try {
-            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postHeader.php", completeHeader);
-            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postWorkExperience.php", workExperiences);
-            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postEducation.php", education);
-            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postLanguageSkills.php", language);
-            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postDigitalSkills.php", digitalSkill);
-            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postProjects.php", projects);
-            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postHonoursAndAwards.php", honours);
-            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postDrivingLicense.php", license);
+            await axios.post("https://alexsuciu.ro/projects/jobrunner/php/postHeader.php", completeHeader);
+            await axios.post("https://alexsuciu.ro/projects/jobrunner/php/postWorkExperience.php", workExperiences);
+            await axios.post("https://alexsuciu.ro/projects/jobrunner/php/postEducation.php", education);
+            await axios.post("https://alexsuciu.ro/projects/jobrunner/php/postLanguageSkills.php", language);
+            await axios.post("https://alexsuciu.ro/projects/jobrunner/php/postDigitalSkills.php", digitalSkill);
+            await axios.post("https://alexsuciu.ro/projects/jobrunner/php/postProjects.php", projects);
+            await axios.post("https://alexsuciu.ro/projects/jobrunner/php/postHonoursAndAwards.php", honours);
+            await axios.post("https://alexsuciu.ro/projects/jobrunner/php/postDrivingLicense.php", license);
             console.log("Auto-saved successfully!");
         } catch (error) {
             console.error("Error during auto-save:", error);
@@ -253,14 +253,14 @@ function AddResumee() {
         setIsSubmitting(true);
         const completeHeader = { ...header, user };
         try {
-            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postHeader.php", completeHeader);
-            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postWorkExperience.php", workExperiences);
-            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postEducation.php", education);
-            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postLanguageSkills.php", language);
-            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postDigitalSkills.php", digitalSkill);
-            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postProjects.php", projects);
-            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postHonoursAndAwards.php", honours);
-            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postDrivingLicense.php", license);
+            await axios.post("https://alexsuciu.ro/projects/jobrunner/php/postHeader.php", completeHeader);
+            await axios.post("https://alexsuciu.ro/projects/jobrunner/php/postWorkExperience.php", workExperiences);
+            await axios.post("https://alexsuciu.ro/projects/jobrunner/php/postEducation.php", education);
+            await axios.post("https://alexsuciu.ro/projects/jobrunner/php/postLanguageSkills.php", language);
+            await axios.post("https://alexsuciu.ro/projects/jobrunner/php/postDigitalSkills.php", digitalSkill);
+            await axios.post("https://alexsuciu.ro/projects/jobrunner/php/postProjects.php", projects);
+            await axios.post("https://alexsuciu.ro/projects/jobrunner/php/postHonoursAndAwards.php", honours);
+            await axios.post("https://alexsuciu.ro/projects/jobrunner/php/postDrivingLicense.php", license);
             window.location.reload();
             // console.log("Success:", { headerResponse, workExperienceResponse, educationResponse, languageResponse, digitalSkillResponse, projectsResponse, honoursResponse, licenseResponse });
         } catch (error) {

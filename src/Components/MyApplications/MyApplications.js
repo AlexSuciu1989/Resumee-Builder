@@ -42,7 +42,7 @@ function MyApplications() {
 
         if (id) {
             try {
-                await axios.post('https://alex-suciu.homebuddy.ro/resumee-builder/php/postApplications.php', [{
+                await axios.post('https://alexsuciu.ro/projects/jobrunner/php/postApplications.php', [{
                     id: id,
                     company: ""  // Set company to an empty string to trigger deletion
                 }]);
@@ -57,7 +57,7 @@ function MyApplications() {
             setLoading(true);
             try {
                 console.log("Fetching data for user:", user);
-                const response = await axios.get(`https://alex-suciu.homebuddy.ro/resumee-builder/php/fetchApplications.php?user=${user}`);
+                const response = await axios.get(`https://alexsuciu.ro/projects/jobrunner/php/fetchApplications.php?user=${user}`);
                 const data = response.data;
                 console.log("Fetched data:", data);
                 if (data && data['cv-applications']) {
@@ -95,7 +95,7 @@ function MyApplications() {
 
         try {
             await axios.post(
-                "https://alex-suciu.homebuddy.ro/resumee-builder/php/postApplications.php",
+                "https://alexsuciu.ro/projects/jobrunner/php/postApplications.php",
                 payload,
                 {
                     headers: {

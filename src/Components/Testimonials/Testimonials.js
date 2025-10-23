@@ -29,7 +29,7 @@ function Testimonials() {
 
         if (id) {
             try {
-                await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postTestimonials.php", [
+                await axios.post("https://alexsuciu.ro/projects/jobrunner/php/postTestimonials.php", [
                     { id: id, testimonial: "" }
                 ]);
             } catch (error) {
@@ -44,7 +44,7 @@ function Testimonials() {
                 setLoading(true);
                 try {
                     const response = await axios.get(
-                        `https://alex-suciu.homebuddy.ro/resumee-builder/php/fetchTestimonials.php?user=${user}`
+                        `https://alexsuciu.ro/projects/jobrunner/php/fetchTestimonials.php?user=${user}`
                     );
                     const data = response.data;
                     console.log(data);
@@ -64,7 +64,7 @@ function Testimonials() {
 
     const autoSave = async () => {
         try {
-            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postTestimonials.php", testimonials);
+            await axios.post("https://alexsuciu.ro/projects/jobrunner/php/postTestimonials.php", testimonials);
             console.log("Auto-saved successfully!");
         } catch (error) {
             console.error("Error during auto-save:", error);
@@ -83,7 +83,7 @@ function Testimonials() {
         e.preventDefault();
         setIsSubmitting(true);
         try {
-            await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/postTestimonials.php", testimonials);
+            await axios.post("https://alexsuciu.ro/projects/jobrunner/php/postTestimonials.php", testimonials);
             setIsEditing(false); // Lock fields again after saving
             console.log("Testimonials saved successfully!");
         } catch (error) {

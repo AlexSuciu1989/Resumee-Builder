@@ -21,7 +21,7 @@ const DataProvider = ({ children }) => {
         // Fetch data if user exists
         const fetchData = async () => {
             try {
-                const response = await axios.get(`https://alex-suciu.homebuddy.ro/resumee-builder/php/fetchData.php?user=${user}`);
+                const response = await axios.get(`https://alexsuciu.ro/projects/jobrunner/php/fetchData.php?user=${user}`);
                 setData(response.data);
             } catch (err) {
                 setError(err.message || "An error occurred while fetching data.");

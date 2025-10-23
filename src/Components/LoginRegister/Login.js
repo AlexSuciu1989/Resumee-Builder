@@ -26,7 +26,7 @@ function Login({ onLoginSuccess }) {
         setSuccess("");
 
         try {
-            const response = await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/login.php", formData);
+            const response = await axios.post("https://alexsuciu.ro/projects/jobrunner/php/login.php", formData);
             if (response.data.status === "success") {
                 setSuccess("Login successfully.");
                 setFormData({

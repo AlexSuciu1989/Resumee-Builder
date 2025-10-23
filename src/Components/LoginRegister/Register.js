@@ -52,7 +52,7 @@ function Register() {
         setSuccess("");
 
         try {
-            const response = await axios.post("https://alex-suciu.homebuddy.ro/resumee-builder/php/register.php", formData);
+            const response = await axios.post("https://alexsuciu.homebuddy.ro/projects/jobrunner/php/register.php", formData);
             if (response.data.status === "success") {
                 setSuccess("Account created successfully.");
                 setFormData({
