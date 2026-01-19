@@ -1,53 +1,49 @@
 .AddDigitalSkills {
-    display: flex;
-    /*flex-direction: column; */
-    border-radius: 15px;
-    margin: 30px 50px;
-    padding: 30px;
-    background-color: white;
-    box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.2);
+  margin: 0px 50px;
+  padding: 0px 30px;
+  background-color: white;
 }
 
 .AddDigitalSkills-input {
-    margin: 10px;
-    min-height: 20px;
-    padding: 8px;
-    padding-left: 10px;
-    border-radius: 10px;
-    border: 1px solid rgb(238, 107, 82, 0.5);
+  margin: 8px;
+  min-height: 20px;
+  padding: 2px;
+  padding-left: 10px;
+  border-radius: 8px;
+  border: 1px solid rgb(238, 107, 82, 0.5);
 }
 
 .AddDigitalSkills-input:focus {
-    border: 2px solid rgb(238, 107, 82);
-    outline: none;
+  border: 2px solid rgb(238, 107, 82);
+  outline: none;
 }
 
 .AddDigitalSkills-type {
-    margin: 10px;
-    min-height: 20px;
-    padding: 8px;
-    padding-left: 10px;
-    border-radius: 10px;
-    border: 1px solid rgb(238, 107, 82, 0.5);
+  margin: 8px;
+  min-height: 20px;
+  padding: 2px;
+  padding-left: 10px;
+  border-radius: 8px;
+  border: 1px solid rgb(238, 107, 82, 0.5);
 }
 
 .AddDigitalSkills-type:focus {
-    border: 2px solid rgb(238, 107, 82);
-    outline: none;
+  border: 2px solid rgb(238, 107, 82);
+  outline: none;
 }
 
 .AddDigitalSkills label {
-    margin-left: 15px;
-    color:rgb(238, 107, 82);
-    margin-bottom: 0;
-    padding-bottom: 0;
-    font-weight: 500;
-    margin-top: 15px;
+  margin-left: 15px;
+  color: rgb(238, 107, 82);
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-weight: 500;
+  margin-top: 15px;
 }
 
 @media only screen and (max-width: 730px) {
-    .AddDigitalSkills {
-        margin-left: 0;
-        margin-right: 0;
-    }
+  .AddDigitalSkills {
+    margin-left: 0;
+    margin-right: 0;
   }
+}
