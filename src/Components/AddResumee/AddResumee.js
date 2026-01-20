@@ -454,17 +454,19 @@ function AddResumee() {
           <div className="spinner"></div>
         </div>
       )}
-      <div>
-        <h2>UserName</h2>
-        <input
-          type="text"
-          placeholder="username"
-          id="user"
-          value={user}
-          onChange={(e) => setUser(e.target.value)}
-          readOnly
-        />
-      </div>
+      {/*
+        <div>
+          <h2>UserName</h2>
+          <input
+            type="text"
+            placeholder="username"
+            id="user"
+            value={user}
+            onChange={(e) => setUser(e.target.value)}
+            readOnly
+          />
+        </div>
+    */}
 
       {loading ? (
         <p>Loading...</p>
@@ -560,13 +562,23 @@ function AddResumee() {
 
             <CollapsibleSection title="Projects">
               {projects.map((projects, index) => (
-                <AddProjects
-                  key={index}
-                  index={index}
-                  projects={projects}
-                  handleProjectsChange={handleProjectsChange}
-                  handleDeleteProject={handleDeleteProject}
-                />
+                <CollapsibleSection
+                  key={projects.id ?? `prj-${index}`}
+                  title={
+                    projects.title?.trim()
+                      ? projects.title
+                      : `Projects #${index + 1}`
+                  }
+                  variant="nested"
+                >
+                  <AddProjects
+                    key={index}
+                    index={index}
+                    projects={projects}
+                    handleProjectsChange={handleProjectsChange}
+                    handleDeleteProject={handleDeleteProject}
+                  />
+                </CollapsibleSection>
               ))}
               <button onClick={addProjects} className="add-button">
                 Add Project
@@ -575,13 +587,23 @@ function AddResumee() {
 
             <CollapsibleSection title="Honours and Awards">
               {honours.map((honours, index) => (
-                <AddHonoursAndAwards
-                  key={index}
-                  index={index}
-                  honours={honours}
-                  handleHonoursChange={handleHonoursChange}
-                  handleDeleteHonour={handleDeleteHonour}
-                />
+                <CollapsibleSection
+                  key={honours.id ?? `hon-${index}`}
+                  title={
+                    honours.title?.trim()
+                      ? honours.title
+                      : `Honours #${index + 1}`
+                  }
+                  variant="nested"
+                >
+                  <AddHonoursAndAwards
+                    key={index}
+                    index={index}
+                    honours={honours}
+                    handleHonoursChange={handleHonoursChange}
+                    handleDeleteHonour={handleDeleteHonour}
+                  />
+                </CollapsibleSection>
               ))}
               <button onClick={addHonours} className="add-button">
                 Add Honours and Awards

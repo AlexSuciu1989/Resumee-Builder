@@ -1,77 +1,125 @@
 .MyApplications {
-    margin: 20px;
-    padding: 20px;
-    border-radius: 20px;
-    background-color: white;
-    border: 4px solid rgb(238, 107, 82);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: white;
+  border: 4px solid rgb(238, 107, 82);
 }
 
 .MyApplications h2 {
-    color: rgb(238, 107, 82);
+  color: rgb(238, 107, 82);
 }
 
 .application-buttons-container {
-    display: flex;
-    padding-left: 20px;
-    padding-right: 20px;
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .save-applications-button {
-    background-color: rgb(111, 82, 238);
-    border: 2px solid  rgb(111, 82, 238);
-    color: white;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: bolder;
-    transition: all 0.2s ease-in;
-    padding: 5px 10px;
-    margin: 5px;
+  background-color: rgb(111, 82, 238);
+  border: 2px solid rgb(111, 82, 238);
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bolder;
+  transition: all 0.2s ease-in;
+  padding: 5px 10px;
+  margin: 5px;
 }
 
 .save-applications-button:hover {
-    cursor: pointer;
-    background-color: white;
-    color: rgb(111, 82, 238);
+  cursor: pointer;
+  background-color: white;
+  color: rgb(111, 82, 238);
 }
 
 .add-application-button {
-    background-color: rgb(238, 107, 82);
-    border: 2px solid rgb(238, 107, 82);
-    padding: 5px 10px;
-    color: white;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: bolder;
-    transition: all 0.2s ease-in;
-    margin: 5px;
+  background-color: rgb(238, 107, 82);
+  border: 2px solid rgb(238, 107, 82);
+  padding: 5px 10px;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bolder;
+  transition: all 0.2s ease-in;
+  margin: 5px;
 }
 
 .add-application-button:hover {
-    cursor: pointer;
-    background-color: white;
-    color: rgb(238, 107, 82);
+  cursor: pointer;
+  background-color: white;
+  color: rgb(238, 107, 82);
 }
 
+.filters-container {
+  border-radius: 15px;
+  margin: 30px 50px;
+  padding: 10px 30px;
+  background-color: white;
+  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  gap: 13px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
 
+.filter-group label {
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.filter-actions {
+  display: flex;
+  align-items: center;
+}
+
+.reset-filters-button {
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.reset-filters-button:hover {
+  background: #e5e7eb;
+}
+
+.filter-group input,
+.filter-group select {
+  padding: 4px;
+  border-radius: 8px;
+  border: solid 1px gray;
+  min-height: 17px;
+}
 
 @media only screen and (max-width: 890px) {
-  
-    .MyApplications-container {
-        display: block;
-    }
-    .application-buttons-container{
-        justify-content: space-around;
-    }
+  .MyApplications-container {
+    display: block;
+  }
+  .application-buttons-container {
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  .MyApplications,
+  .filters-container {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
-  @media only screen and (max-width: 730px) {
-    .MyApplications {
-        margin: 0;
-        padding: 5px;
-    }
-
-    h2 {
-        text-align: center;
-    }
+  h2 {
+    text-align: center;
   }
+}
