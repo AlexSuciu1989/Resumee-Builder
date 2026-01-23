@@ -1,14 +1,31 @@
-import React from "react";
-import './DisplayUsername.css';
+import React, { useState } from "react";
+import "./DisplayUsername.css";
 import Logout from "./Logout";
+import UserMenu from "../UserMenu/UserMenu";
 
+function DisplayUsername({ username }) {
+  const [openMenu, setOpenMenu] = useState(false);
 
-function DisplayUsername ({username}) {
-    return (
-        <div className="DisplayUsername">
-            <p>{username} {username ? <span><Logout/></span> : null}</p>
-        </div>
-    )
+  return (
+    <div className="DisplayUsername">
+      {username && (
+        <>
+          <span className="username">{username}</span>
+
+          <button
+            className="profile-btn"
+            onClick={() => setOpenMenu(!openMenu)}
+          >
+            My Profile
+          </button>
+
+          <Logout />
+
+          {openMenu && <UserMenu />}
+        </>
+      )}
+    </div>
+  );
 }
 
-export default DisplayUsername
+export default DisplayUsername;
