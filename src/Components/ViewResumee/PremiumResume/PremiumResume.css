@@ -84,3 +84,10 @@
     text-decoration: none;
   }
 }
+
+@media only screen and (max-width: 710px) {
+  .PremiumResume{
+    margin: 0px;
+    padding: 10px;
+  }
+}
