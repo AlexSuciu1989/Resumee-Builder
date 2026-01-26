@@ -37,7 +37,7 @@ $update = $conn->prepare(
 $update->bind_param("sss", $token, $expires, $email);
 $update->execute();
 
-$resetLink = "https://alexsuciu.ro/reset-password?token=$token";
+$resetLink = "https://alexsuciu.ro/projects/jobrunner/reset-password?token=$token";
 
 $subject = "Reset your Job-Runner password";
 $message = "Click the link below to reset your password:\n\n$resetLink\n\nThis link expires in 1 hour.";

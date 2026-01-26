@@ -58,3 +58,18 @@
 .arrow {
   font-size: 20px;
 }
+
+  @media only screen and (max-width: 730px) {
+    .collapsible-section {
+        border:none;
+    }
+
+    .collapsible-section.default h2, .collapsible-section.nested h2 {
+        text-align: left;
+    }
+
+    .collapsible-section.nested {
+        border: none;
+    }
+    
+  }

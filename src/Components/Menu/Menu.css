@@ -35,6 +35,12 @@
 }
 
 @media only screen and (max-width: 710px) {
+
+    .Menu-main-buttons {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 2px;
+    }
     .Menu-button-container {
         flex-direction: column;
         align-items: center;
@@ -42,7 +48,8 @@
 
     .Menu-button{
         width: 100%;
-        margin: 10px;
+        margin: 3px;
+        padding: 5px;
     }
 
 

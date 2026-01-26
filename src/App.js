@@ -14,39 +14,29 @@ function App() {
   const [menuActive, setMenuActive] = useState(false);
 
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Navbar />
+    <BrowserRouter basename="">
+  <div className="App">
+    <Navbar />
+    <div className="content-wrapper">
+      <Routes>
+        <Route path="/reset-password" element={<ResetPassword />} />
+        <Route
+          path="/"
+          element={
+            <>
+              <div className="Menu-container">
+                {!Cookies.get("username") ? <LoginRegister /> : <Menu onMenuOpen={() => setMenuActive(true)} />}
+              </div>
+              {!menuActive && <Homepage />}
+            </>
+          }
+        />
+      </Routes>
+    </div>
+    <Footer />
+  </div>
+</BrowserRouter>
 
-        <div className="content-wrapper">
-          <Routes>
-            {/* Reset password */}
-            <Route path="/reset-password" element={<ResetPassword />} />
-
-            {/* Main app */}
-            <Route
-              path="/"
-              element={
-                <>
-                  <div className="Menu-container">
-                    {!Cookies.get("username") ? (
-                      <LoginRegister />
-                    ) : (
-                      <Menu onMenuOpen={() => setMenuActive(true)} />
-                    )}
-                  </div>
-
-                  {/* Homepage only when menu inactive */}
-                  {!menuActive && <Homepage />}
-                </>
-              }
-            />
-          </Routes>
-        </div>
-
-        <Footer />
-      </div>
-    </BrowserRouter>
   );
 }
 export default App;

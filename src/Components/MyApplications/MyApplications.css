@@ -117,6 +117,12 @@
     margin-right: 0;
     padding-left: 5px;
     padding-right: 5px;
+    border: none;
+    background-color: transparent;
+  }
+
+  .filters-container {
+    background-color: white;
   }
 
   h2 {

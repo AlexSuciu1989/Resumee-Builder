@@ -73,3 +73,17 @@ a:hover{
   text-align: center;
   /* No absolute positioning */
 }
+
+ @media only screen and (max-width: 730px) {
+    .Footer > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-terms-container{
+        display: flex;
+        margin: 0;
+        padding: 2px;
+        width: 100%;
+    }
+ }
