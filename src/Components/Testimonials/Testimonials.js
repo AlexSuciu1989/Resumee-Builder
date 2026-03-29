@@ -100,11 +100,6 @@ function Testimonials() {
                     <div className="spinner"></div>
                 </div>
             )}
-            <div>
-                <h2>User Name</h2>
-                <input type="text" placeholder="username" id="user" value={user} readOnly />
-            </div>
-
             {loading ? (
                 <p>Loading...</p>
             ) : (

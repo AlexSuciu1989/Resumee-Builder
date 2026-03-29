@@ -65,5 +65,7 @@
     .AddHonours {
         margin-left: 0;
         margin-right: 0;
+        padding-left: 2px;
+        padding-right: 2px;
     }
   }

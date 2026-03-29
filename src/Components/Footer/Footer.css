@@ -66,3 +66,24 @@ a:hover{
         display: none;
     }
 }
+
+.Footer {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+  /* No absolute positioning */
+}
+
+ @media only screen and (max-width: 730px) {
+    .Footer > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-terms-container{
+        display: flex;
+        margin: 0;
+        padding: 2px;
+        width: 100%;
+    }
+ }

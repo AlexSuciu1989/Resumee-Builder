@@ -44,14 +44,17 @@
 }
 
 @media only screen and (max-width: 890px) {
-    .AddProjects-container {
+    .AddTestimonial-container {
        display: block;
    }
  }
 
  @media only screen and (max-width: 730px) {
-    .AddProjects {
+    .AddTestimonial {
         margin-left: 0;
         margin-right: 0;
+        padding-left: 2px;
+        padding-right: 2px;
+        background-color: white;
     }
   }
